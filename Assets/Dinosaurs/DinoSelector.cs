@@ -1,37 +1,39 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DinoSelector : MonoBehaviour {
-
-	public Dino ChooseRandomDino(){
+public class DinoSelector {
+	public Dino ChooseRandomDino(GameObject currentDinosaur){
 		Dino dinosaur = null;
-		System.Random rnd = new System.Random ();
-		int num = rnd.Next (5);
-		
+		int num = Random.Range(0, 4);
 		Debug.Log (num + "");
-		
-		if (dinosaur == null) {
-			switch (num) {
-			case 0:
-				dinosaur = gameObject.AddComponent<Diplodofortress> ();
-				break;
-			case 1:
-				dinosaur = gameObject.AddComponent<Triceratank> ();
-				break;
-			case 2:
-				dinosaur = gameObject.AddComponent<Assaultosaurus> ();
-				break;
-			case 3:
-				dinosaur = gameObject.AddComponent<Horroraptor> ();
-				break;
-			case 4:
-				dinosaur = gameObject.AddComponent<SatanasaurusRex> ();
-				break;
-			default:
-				dinosaur = gameObject.AddComponent<Terrordactyl> ();
-				break;
-			}
+
+		switch (num) {
+		case 0:
+			currentDinosaur.AddComponent<Diplodofortress>();
+			dinosaur = currentDinosaur.GetComponent<Diplodofortress>();
+			break;
+		case 1:
+			currentDinosaur.AddComponent<Triceratank>();
+			dinosaur = currentDinosaur.GetComponent<Triceratank>();
+			break;
+		case 2:
+			currentDinosaur.AddComponent<Assaultosaurus>();
+			dinosaur = currentDinosaur.GetComponent<Assaultosaurus>();
+			break;
+		case 3:
+			currentDinosaur.AddComponent<Horroraptor>();
+			dinosaur = currentDinosaur.GetComponent<Horroraptor>();
+			break;
+		case 4:
+			currentDinosaur.AddComponent<SatanasaurusRex>();
+			dinosaur = currentDinosaur.GetComponent<SatanasaurusRex>();
+			break;
+		default:
+			currentDinosaur.AddComponent<Terrordactyl>();
+			dinosaur = currentDinosaur.GetComponent<Terrordactyl>();
+			break;
 		}
+
 		return dinosaur;
 	}
 }

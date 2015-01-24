@@ -12,12 +12,9 @@ public class Player : MonoBehaviour
 
 	void Ascend () {
 		DinoSelector chooseDino = new DinoSelector ();
-		dinosaur = chooseDino.ChooseRandomDino ();
+		dinosaur = chooseDino.ChooseRandomDino (gameObject);
 		dinosaur.playerControlled = true;
 		dinosaur.Create ();
-
-
-
 		speed = dinosaur.speed;
 		projectileRange = 1;//dinosaur.weapon.range;
 	}
