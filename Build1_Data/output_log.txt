@@ -1,0 +1,777 @@
+Initialize engine version: 4.5.1f3 (73cd57f80e3e)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 650 Ti  (ID=0x11c6)
+    Vendor:   NVIDIA
+    VRAM:     965 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: H:\GameJam2015B\Build1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading H:\GameJam2015B\Build1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: H:\GameJam2015B\Build1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading H:\GameJam2015B\Build1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.309 seconds
+desktop: 1680x1050 59Hz; virtual: 3360x1070 at 0,-20
+<RI> Initializing input.
+<RI> Input initialized.
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Platform assembly: H:\GameJam2015B\Build1_Data\Managed\System.dll (this message is harmless)
+Hurr: 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:1 level:0EXP: 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:10 level:1EXP: 100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:1 level:0EXP: 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:10 level:1EXP: 100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:1 level:0EXP: 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:1 level:0EXP: 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:10 level:1EXP: 100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:10 level:1EXP: 100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:10 level:1EXP: 100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:1 level:0EXP: 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:10 level:1EXP: 100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:1 level:0EXP: 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:10 level:1EXP: 100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index
+  at System.Collections.Generic.List`1[UnityEngine.GameObject].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:10 level:1EXP: 100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index
+  at System.Collections.Generic.List`1[UnityEngine.GameObject].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index
+  at System.Collections.Generic.List`1[UnityEngine.GameObject].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:10 level:1EXP: 100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:10 level:1EXP: 100
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:1 level:0EXP: 1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 22
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index
+  at System.Collections.Generic.List`1[UnityEngine.GameObject].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: The prefab you want to instantiate is null.
+  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
+  at Dino.die () [0x00000] in <filename unknown>:0 
+  at Dino.Damage (Int32 amount) [0x00000] in <filename unknown>:0 
+  at Projectile.OnCollisionEnter2D (UnityEngine.Collision2D enemy) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+EXP Worth:10000
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 10648
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Health:100 level:2EXP: 10000
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Hurr: 10648
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Range: 10648
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+

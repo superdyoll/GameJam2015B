@@ -70,7 +70,7 @@ public class Projectile : MonoBehaviour{
 
 				if(tempDist < distanceToNearestEnemy){
 					tempDist = distanceToNearestEnemy;
-					nearestEnemy = dinoGenerator.dinosOnScreen[i].gameObject;
+					nearestEnemy = dinoGenerator.dinosOnScreen[i -1].gameObject;
 				}
 			}
 			
