@@ -8,6 +8,11 @@ public class Player : MonoBehaviour
 	public GameObject projectile;
 	private float timer = 0f;
 
+	public int health = 100;
+
+	public int numberOfUpgrades = 5;
+	protected int upgradeNumber = 0;
+
 	public Dino dinosaur { get; set; }
 
 	public float bloodScore = 0;
@@ -39,6 +44,14 @@ public class Player : MonoBehaviour
 		Level.Tick ();
 
 		bloodText.text = bloodScore + " BUCKETS OF BLOOD SPILLED";
+
+		if (health <= 0) {
+			if(upgradeNumber <= numberOfUpgrades){
+				Ascend();
+			}else{
+				Kill();
+			}
+		}
 
 	}
 
@@ -112,5 +125,17 @@ public class Player : MonoBehaviour
 				gameObject.transform.position = new Vector2(50f, gameObject.transform.position.y);
 			}
 		}
+	}
+
+	public void Damage(int amount) {
+		health -= amount;
+				
+		if (health <= 0) {
+			Kill();
+		}
+	}
+
+	private void Kill(){
+		Destroy (this.gameObject);
 	}
 }

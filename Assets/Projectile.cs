@@ -5,7 +5,7 @@ public class Projectile : MonoBehaviour{
 	private int range, radius, bounce, speed, damage;
 	private Vector3 direction;
 	private GameObject player;
-	private Animation explosion;
+	public Animation explosion;
 	private string hostileTo;
 	private DinoGenerator dinoGenerator; 
 
@@ -47,7 +47,7 @@ public class Projectile : MonoBehaviour{
 			explosion.Play();
 
 			if(!explosion.isPlaying){
-				Debug.Log ("Potato");
+				//Debug.Log ("Potato");
 				Destroy(this.gameObject);
 			}
 		}
