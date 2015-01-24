@@ -20,7 +20,7 @@ public abstract class Weapon : MonoBehaviour {
 
 	public void Create() {
 		playerControlled = false;
-		Debug.Log ("Bleep");
+		//Debug.Log ("Bleep");
 		range = baseRange + pointsIn;
 		radius = baseRadius + pointsIn;
 		damage = baseDamage + pointsIn;
