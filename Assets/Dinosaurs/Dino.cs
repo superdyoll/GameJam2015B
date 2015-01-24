@@ -52,6 +52,7 @@ public abstract class Dino : MonoBehaviour {
 		survivability 	= (int)Math.Pow (baseSurvivability, level);
 		explosive 	= (int)Math.Pow (baseExplosive, level);
 		exp 		= (int)Math.Pow (baseExp, level);
+		gameObject.GetComponent<DinoAI> ().InsertBrain (this);
 	}
 	
 	// Update is called once per frame
@@ -61,7 +62,6 @@ public abstract class Dino : MonoBehaviour {
 
 	public void Damage(int amount) {
 		health -= amount;
-		Debug.Log (health);
 		if (health <= 0) {
 			this.die();
 		}
