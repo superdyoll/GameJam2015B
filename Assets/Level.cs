@@ -13,7 +13,7 @@ public static class Level{
 		}
 	}
 
-	private static void LevelUp() {
+	public static void LevelUp() {
 		level++;
 		timer = 600;
 		levelText.text = "Annihilation Level: " + level;

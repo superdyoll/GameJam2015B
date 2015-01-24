@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
 
 	void Start() {
 		Ascend ();
+		Level.LevelUp ();
 	}
 
 	void Update () {
