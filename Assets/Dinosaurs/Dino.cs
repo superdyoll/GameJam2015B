@@ -96,7 +96,6 @@ public abstract class Dino : MonoBehaviour {
 		gameObject.GetComponent<DinoAI> ().InsertBrain (this);
 
 		Debug.Log ("Base:" + baseSpeed + " level:" + level);
-
 	}
 
 

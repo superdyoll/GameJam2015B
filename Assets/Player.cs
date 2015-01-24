@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
 
 	void Ascend () {
 		DinoSelector chooseDino = new DinoSelector ();
-		dinosaur = chooseDino.ChooseRandomDino ();
+		dinosaur = chooseDino.ChooseRandomDino (gameObject);
 
 		dinosaur.playerControlled = true;
 		dinosaur.Create ();
@@ -64,8 +64,6 @@ public class Player : MonoBehaviour
 	private void Fire(){
 		GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
 		Projectile projScript = projInst.GetComponent<Projectile> ();
-
-		Debug.Log ("range: " + dinosaur.getRange());
 		projScript.Go (projectileRange, 10, 1, 10, 5, GetVect3Rotation (), "Enemy");
 
 	}

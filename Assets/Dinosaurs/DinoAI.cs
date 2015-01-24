@@ -17,18 +17,19 @@ public class DinoAI : MonoBehaviour {
 	}
 
 	void Update () {
+		Debug.Log ("Potato");
+
 		if(ready){
 			playerPosition = player.GetPosition ();
 			Vector3 currentPosition = new Vector2 (transform.position.x, transform.position.y);
 			float distanceToPlayer = Vector2.Distance (playerPosition, currentPosition);
 
-			if(distanceToPlayer > dinoStats.weapon.range + 1){
-				Vector3 directionToPlayer = playerPosition - currentPosition;
-				directionToPlayer.Normalize ();
-				float moveDirMod = -0.008f * distanceToPlayer + 1.4f;
-				transform.position += 0.1f * dinoStats.speed * (directionToPlayer + (movingDirection * moveDirMod / 1.2f));
-			}
-			if(distanceToPlayer < 50){//dinoStats.weapon.range){
+			Vector3 directionToPlayer = playerPosition - currentPosition;
+			directionToPlayer.Normalize ();
+			float moveDirMod = -0.008f * distanceToPlayer + 1.4f;
+			transform.position += 0.1f * dinoStats.speed * (directionToPlayer + (movingDirection * moveDirMod / 1.2f));
+
+			if(distanceToPlayer < dinoStats.weapon.range){
 				FireWeapon();
 			}
 		}
