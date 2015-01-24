@@ -51,6 +51,7 @@ public class Projectile : MonoBehaviour{
 
 	public void DestroyMissile(){
 		Destroy (this.gameObject);
+	}
 
 	void OnCollisionEnter(Collision enemy){
 		Debug.Log ("potato");
