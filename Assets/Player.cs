@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
 
 	public Dino dinosaur { get; set; }
 
+	public float bloodScore = 0;
+	private GUIText bloodText;
+
 	void Ascend () {
 		DinoSelector chooseDino = new DinoSelector ();
 		dinosaur = chooseDino.ChooseRandomDino (gameObject);
@@ -29,6 +32,8 @@ public class Player : MonoBehaviour
 		GetMovementInput ();
 		GetMouseInput ();
 		UpdateCameraPosition ();
+		bloodText = GameObject.Find("BloodScore").GetComponent<GUIText> ();
+		bloodText.text = "" + bloodScore;
 	}
 
 	public Vector2 GetPosition()

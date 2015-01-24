@@ -24,7 +24,7 @@ public class DinoAI : MonoBehaviour {
 			Vector3 currentPosition = new Vector2 (transform.position.x, transform.position.y);
 			float distanceToPlayer = Vector2.Distance (playerPosition, currentPosition);
 
-			if(distanceToPlayer > 2f){
+			if(distanceToPlayer > 5f){
 				Vector3 directionToPlayer = playerPosition - currentPosition;
 				directionToPlayer.Normalize ();
 				float moveDirMod = -0.008f * distanceToPlayer + 1.4f;

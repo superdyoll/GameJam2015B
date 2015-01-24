@@ -8,7 +8,8 @@ public abstract class Dino : MonoBehaviour {
 	abstract protected int baseSpeed         { get; }
 	abstract protected int baseSurvivability { get; }
 	abstract protected int baseExplosive     { get; }
-	abstract protected int baseExp           { get; }
+
+	protected int baseExp { get { return 100; } }
 
 	abstract protected Color colour { get; }
 	public Weapon weapon { get; set; }
@@ -22,6 +23,8 @@ public abstract class Dino : MonoBehaviour {
 
 	public bool playerControlled { get; set; }
 
+	private Player player;
+
 	double level { get; set; }
 
 	// Use this for initialization
@@ -30,6 +33,8 @@ public abstract class Dino : MonoBehaviour {
 	}
 
 	public void Create() {
+		player = GameObject.Find ("Player").GetComponent<Player>();
+
 		if (playerControlled) {
 			health = baseHealth;
 			speed  = baseSpeed;
@@ -72,8 +77,10 @@ public abstract class Dino : MonoBehaviour {
 		if (boss == 13) {
 			level = gameLevel + 1.5;
 			transform.localScale = transform.localScale * 2;
+			exp = (int)Math.Pow (baseExp, gameLevel + 0.5);
 		} else {
 			level = gameLevel + rndLevel;
+			exp = (int)Math.Pow (baseExp, level);
 		}
 
 		int weaponInt = 1;// for now, there's only one //rnd.Next (5);
@@ -92,7 +99,7 @@ public abstract class Dino : MonoBehaviour {
 		speed = (int)Math.Pow (baseSpeed, level);
 		survivability = (int)Math.Pow (baseSurvivability, level);
 		explosive = (int)Math.Pow (baseExplosive, level);
-		exp = (int)Math.Pow (baseExp, level);
+
 		gameObject.GetComponent<DinoAI> ().InsertBrain (this);
 
 		Debug.Log ("Base:" + baseSpeed + " level:" + level);
@@ -101,12 +108,16 @@ public abstract class Dino : MonoBehaviour {
 
 	public void Damage(int amount) {
 		health -= amount;
+
+		player.bloodScore += exp / 10;
+
 		if (health <= 0) {
 			this.die();
 		}
 	}
 
 	public void die() {
+		player.bloodScore += exp;
 		DinoGenerator dinoThing = GameObject.Find ("Main Camera").GetComponent<DinoGenerator> ();
 		dinoThing.RemoveDinosaur (this.gameObject);
 		Destroy (this.gameObject);
