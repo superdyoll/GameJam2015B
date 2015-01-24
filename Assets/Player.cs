@@ -3,9 +3,37 @@ using System.Collections;
 
 public class Player : MonoBehaviour 
 {
-	public float speed = 1;
+	public float speed { get; set; }
+	public int projectileRange { get; set; }
 	public GameObject projectile;
 	private float timer = 0f;
+
+	public Dino dinosaur { get; set; }
+
+	void Ascend () {
+		System.Random rnd = new System.Random ();
+		int num = rnd.Next (5);
+
+		switch (num) {
+		case 0: Ascend (new Diplodofortress());
+			break;
+		case 1: Ascend (new Triceratank());
+			break;
+		case 2: Ascend (new Assaultosaurus());
+			break;
+		case 3: Ascend (new Horroraptor());
+			break;
+		case 4: Ascend (new SatanasaurusRex());
+			break;
+		default: Ascend (new Terrordactyl());
+			break;
+		}
+	}
+
+	void Ascend (Dino dino) {
+		speed = dino.speed;
+		projectileRange = dino.weapon.range;
+	}
 
 	void Update () {
 		GetMovementInput ();
@@ -46,7 +74,7 @@ public class Player : MonoBehaviour
 	private void Fire(){
 		GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
 		Projectile projScript = projInst.GetComponent<Projectile> ();
-		projScript.Go (50, 10, 1, 10, GetVect3Rotation ());
+		projScript.Go (projectileRange, 10, 1, 10, GetVect3Rotation ());
 	}
 
 	private void GetMovementInput(){
