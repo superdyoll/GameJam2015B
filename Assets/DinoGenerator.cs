@@ -6,7 +6,8 @@ using System.Collections.Generic;
 public class DinoGenerator : MonoBehaviour {
 
 	public int totalDinosaurs = 10;
-	protected List<Dino> dinosOnScreen = new List<Dino>();
+	public GameObject dinoPrefab;
+	protected List<GameObject> dinosOnScreen = new List<GameObject>();
 	protected DinoSelector chooseDino = new DinoSelector();
 
 	// Use this for initialization
@@ -21,8 +22,8 @@ public class DinoGenerator : MonoBehaviour {
 			int x = rnd.Next (50);
 			int y = rnd.Next (50);
 			Vector3 newDinoVector = new Vector3(x,y);
-			Dino newDino = chooseDino.ChooseRandomDino();
-			Instantiate(newDino, newDinoVector, Quaternion.identity);
+			GameObject newDino = (GameObject)Instantiate(dinoPrefab, newDinoVector, Quaternion.identity);
+			chooseDino.ChooseRandomDino(newDino);
 			dinosOnScreen.Add(newDino);
 		}
 	}
