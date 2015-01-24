@@ -17,8 +17,6 @@ public class Player : MonoBehaviour
 		dinosaur.playerControlled = true;
 		dinosaur.Create ();
 
-		Debug.Log ("range: " + dinosaur.getRange());
-
 		speed = dinosaur.speed;
 		projectileRange = dinosaur.getRange();
 	}
@@ -67,6 +65,7 @@ public class Player : MonoBehaviour
 		GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
 		Projectile projScript = projInst.GetComponent<Projectile> ();
 
+		Debug.Log ("range: " + dinosaur.getRange());
 		projScript.Go (projectileRange, 10, 1, 10, 5, GetVect3Rotation (), "Enemy");
 
 	}

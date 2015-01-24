@@ -311,11 +311,8 @@ GameObject:
   - 114: {fileID: 1282715835}
   - 50: {fileID: 1282715840}
   - 61: {fileID: 1282715837}
-<<<<<<< HEAD
-  - 114: {fileID: 1282715841}
-=======
   - 212: {fileID: 1282715836}
->>>>>>> f67859b576c29bea66a7629a02e4c2d2d6a504c1
+  - 114: {fileID: 1282715841}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
