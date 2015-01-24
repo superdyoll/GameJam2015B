@@ -18,9 +18,8 @@ public class DinoGenerator : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (dinosOnScreen.Count <= totalDinosaurs){
-			System.Random rnd = new System.Random ();
-			int x = rnd.Next (50);
-			int y = rnd.Next (50);
+			int x = Random.Range(0, 50);
+			int y = Random.Range(0, 50);
 			Vector3 newDinoVector = new Vector3(x,y);
 			GameObject newDino = (GameObject)Instantiate(dinoPrefab, newDinoVector, Quaternion.identity);
 			chooseDino.ChooseRandomDino(newDino);
