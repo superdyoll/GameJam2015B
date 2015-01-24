@@ -49,6 +49,10 @@ public class Projectile : MonoBehaviour{
 		}
 	}
 
+	void DestroyMissile(){
+		Destroy (this.gameObject);
+	}
+
 	void OnCollisionEnter2D(Collision2D enemy){
 		if (enemy.transform.tag == hostileTo) {
 			enemy.gameObject.GetComponent<Dino>().Damage(damage);

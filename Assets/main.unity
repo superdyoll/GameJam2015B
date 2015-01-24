@@ -308,14 +308,16 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1282715839}
-  - 33: {fileID: 1282715838}
-  - 23: {fileID: 1282715836}
   - 114: {fileID: 1282715835}
   - 50: {fileID: 1282715840}
   - 61: {fileID: 1282715837}
+<<<<<<< HEAD
   - 114: {fileID: 1282715841}
+=======
+  - 212: {fileID: 1282715836}
+>>>>>>> f67859b576c29bea66a7629a02e4c2d2d6a504c1
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,19 +334,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4efb943c1902e04cba2836849b9c436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!23 &1282715836
-Renderer:
+  speed: 0
+--- !u!212 &1282715836
+SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1282715834}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -352,6 +355,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
+  m_Sprite: {fileID: 21300010, guid: 50e3a86f59a9dea4993dbe6f76171833, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!61 &1282715837
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -363,13 +368,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
---- !u!33 &1282715838
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282715834}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1282715839
 Transform:
   m_ObjectHideFlags: 0
@@ -393,7 +391,7 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -503,7 +501,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 50e3a86f59a9dea4993dbe6f76171833, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!61 &1788235301
 BoxCollider2D:

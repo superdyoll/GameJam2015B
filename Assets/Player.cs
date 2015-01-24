@@ -11,28 +11,19 @@ public class Player : MonoBehaviour
 	public Dino dinosaur { get; set; }
 
 	void Ascend () {
-		System.Random rnd = new System.Random ();
-		int num = rnd.Next (5);
+		DinoSelector chooseDino = new DinoSelector ();
+		dinosaur = chooseDino.ChooseRandomDino ();
+		dinosaur.playerControlled = true;
+		dinosaur.Create ();
 
-		switch (num) {
-		case 0: Ascend (new Diplodofortress());
-			break;
-		case 1: Ascend (new Triceratank());
-			break;
-		case 2: Ascend (new Assaultosaurus());
-			break;
-		case 3: Ascend (new Horroraptor());
-			break;
-		case 4: Ascend (new SatanasaurusRex());
-			break;
-		default: Ascend (new Terrordactyl());
-			break;
-		}
+
+
+		speed = dinosaur.speed;
+		projectileRange = 1;//dinosaur.weapon.range;
 	}
 
-	void Ascend (Dino dino) {
-		this.speed = dino.speed;
-		projectileRange = dino.weapon.range;
+	void Start() {
+		Ascend ();
 	}
 
 	void Update () {
