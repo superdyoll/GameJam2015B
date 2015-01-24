@@ -34,9 +34,11 @@ public class Player : MonoBehaviour
 		UpdateCameraPosition ();
 
 		bloodText = GameObject.Find("BloodScore").GetComponent<GUIText> ();
-		bloodText.text = "" + bloodScore;
 
 		Level.Tick ();
+
+		bloodText.text = bloodScore + " BUCKETS OF BLOOD SPILLED";
+
 	}
 
 	public Vector2 GetPosition()

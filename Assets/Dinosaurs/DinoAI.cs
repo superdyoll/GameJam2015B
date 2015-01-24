@@ -17,8 +17,6 @@ public class DinoAI : MonoBehaviour {
 	}
 
 	void Update () {
-		Debug.Log ("Potato");
-
 		if(ready){
 			playerPosition = player.GetPosition ();
 			Vector3 currentPosition = new Vector2 (transform.position.x, transform.position.y);
