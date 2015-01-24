@@ -122,12 +122,13 @@ public abstract class Dino : MonoBehaviour {
 	}
 
 	public void die() {
-		Vector3 pos = new Vector3 (transform.position.x, transform.position.y, 0f);
-		//Instantiate (explosion, pos, Quaternion.identity);
-
 		player.bloodScore += exp;
 		DinoGenerator dinoThing = GameObject.Find ("Main Camera").GetComponent<DinoGenerator> ();
 		dinoThing.RemoveDinosaur (this.gameObject);
+
+		Vector3 pos = new Vector3 (transform.position.x, transform.position.y, 0f);
+		Instantiate (dinoThing.explosion, pos, Quaternion.identity);
+
 		Destroy (this.gameObject);
 
 		//Add explosion stuff here
