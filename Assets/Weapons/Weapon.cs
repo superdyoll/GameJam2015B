@@ -11,12 +11,24 @@ public abstract class Weapon : MonoBehaviour {
 
 	public int damage { get; set; }
 	public int radius { get; set; }
-	public int range  { get; set; }
+	public int range { get; set; }
 	public int pointsIn { get; set; }
+
+	public int getRange() {
+		return range;
+	}
+
+	public void Create() {
+		playerControlled = false;
+		Debug.Log ("Bleep");
+		range = baseRange + pointsIn;
+		radius = baseRadius + pointsIn;
+		damage = baseDamage + pointsIn;
+	}
 
 	// Use this for initialization
 	void Start () {
-		playerControlled = false;
+		
 	}
 	
 	// Update is called once per frame

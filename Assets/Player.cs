@@ -14,8 +14,6 @@ public class Player : MonoBehaviour
 		System.Random rnd = new System.Random ();
 		int num = rnd.Next (5);
 
-		Debug.Log (num + "");
-
 		if (dinosaur == null) {
 			switch (num) {
 			case 0:
@@ -41,10 +39,10 @@ public class Player : MonoBehaviour
 		dinosaur.playerControlled = true;
 		dinosaur.Create ();
 
-
+		Debug.Log ("range: " + dinosaur.getRange());
 
 		speed = dinosaur.speed;
-		projectileRange = 1;//dinosaur.weapon.range;
+		projectileRange = dinosaur.getRange();
 	}
 
 	void Start() {
@@ -90,7 +88,7 @@ public class Player : MonoBehaviour
 	private void Fire(){
 		GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
 		Projectile projScript = projInst.GetComponent<Projectile> ();
-		projScript.Go (50, 10, 1, 10, 5, GetVect3Rotation ());
+		projScript.Go (projectileRange, 10, 1, 10, 5, GetVect3Rotation ());
 	}
 
 	private void GetMovementInput(){

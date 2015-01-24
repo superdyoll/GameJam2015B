@@ -39,6 +39,25 @@ public abstract class Dino : MonoBehaviour {
 		} else {
 			AIInitialise ();
 		}
+
+		int weaponInt = 1;// for now, there's only one //rnd.Next (5);
+		
+		switch (weaponInt) {
+		case 1: weapon = gameObject.AddComponent<Launcher>();
+			break;
+		default: weapon = gameObject.AddComponent<Launcher>();
+			break;
+		}
+		weapon.Create ();
+		Debug.Log("Range: "+ weapon.getRange());
+	}
+
+	public int getRange() {
+		if (weapon != null) {
+			return weapon.getRange ();
+		} else {
+			return 0;
+		}
 	}
 
 	private void AIInitialise () {
@@ -55,15 +74,6 @@ public abstract class Dino : MonoBehaviour {
 			transform.localScale = transform.localScale * 2;
 		} else {
 			level = gameLevel + rndLevel;
-		}
-		
-		int weaponInt = 1;// for now, there's only one //rnd.Next (5);
-		
-		switch (weaponInt) {
-		case 1: weapon = gameObject.AddComponent<Launcher>();
-			break;
-		default: weapon = gameObject.AddComponent<Launcher>();
-			break;
 		}
 		
 		Debug.Log ("Base:" + baseSpeed + " level:" + level);

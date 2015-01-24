@@ -11,7 +11,7 @@ public class Launcher : Weapon {
 			} else {
 				pointsIn = 2; //Reliant upon current game level
 			} 
-			return Screen.height / 2 + (pointsIn * Screen.height/20);
+			return Screen.height /50;
 		} }
 
 	// Use this for initialization
