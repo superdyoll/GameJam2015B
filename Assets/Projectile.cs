@@ -73,7 +73,7 @@ public class Projectile : MonoBehaviour{
 				float tempDist = Vector3.Distance(dinoGenerator.dinosOnScreen[i].transform.position, transform.position);
 				if(tempDist < distanceToNearestEnemy){
 					tempDist = distanceToNearestEnemy;
-					nearestEnemy = dinoGenerator.dinosOnScreen[i -1].gameObject;
+					nearestEnemy = dinoGenerator.dinosOnScreen[i].gameObject;
 				}
 			}
 			
