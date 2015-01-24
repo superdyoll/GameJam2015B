@@ -51,7 +51,7 @@ public class Projectile : MonoBehaviour{
 			explosion.Play();
 
 			if(!explosion.isPlaying){
-				//Debug.Log ("Potato");
+				Debug.Log ("Destroyed bullet after range");
 				Destroy(this.gameObject);
 			}
 		}
@@ -77,7 +77,7 @@ public class Projectile : MonoBehaviour{
 				float tempDist = Vector3.Distance(dinoGenerator.dinosOnScreen[i].transform.position, transform.position);
 				if(tempDist < distanceToNearestEnemy){
 					tempDist = distanceToNearestEnemy;
-					nearestEnemy = dinoGenerator.dinosOnScreen[i -1].gameObject;
+					nearestEnemy = dinoGenerator.dinosOnScreen[i].gameObject;
 				}
 			}
 			
@@ -88,7 +88,8 @@ public class Projectile : MonoBehaviour{
 				projectile.GetComponent<Projectile>().Go (range, radius, bounce, speed, damage, target, hostileTo);
 			}
 
-			Destroy (gameObject);
+			Destroy (this.gameObject);
+			Debug.Log("Destroyed bullet");
 		}
 	}
 }
