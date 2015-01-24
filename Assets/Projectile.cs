@@ -43,6 +43,10 @@ public class Projectile : MonoBehaviour{
 
 		float distanceToPlayer = Vector3.Distance (transform.position, player.transform.position); 
 
+		if (distanceToPlayer > 70f) {
+			Destroy (gameObject);
+		}
+
 		if(distanceToPlayer > range){
 			explosion.Play();
 
