@@ -11,6 +11,7 @@ public abstract class Dino : MonoBehaviour {
 	abstract protected int baseExp           { get; }
 
 	abstract protected Color colour { get; }
+	public Weapon weapon { get; set; }
 
 	public int health { get; set; }
 	public int speed { get; set;}
@@ -36,7 +37,16 @@ public abstract class Dino : MonoBehaviour {
 		} else {
 			level = gameLevel + rndLevel;
 		}
+
+		int weaponInt = 1;// for now, there's only one //rnd.Next (5);
 		
+		switch (weaponInt) {
+		case 1: weapon = new Launcher();
+			break;
+		default: weapon = new Launcher();
+			break;
+		}
+
 		health 		= (int)Math.Pow (baseHealth, level);
 		speed 		= (int)Math.Pow (baseSpeed, level);
 		survivability 	= (int)Math.Pow (baseSurvivability, level);

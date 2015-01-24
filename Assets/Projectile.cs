@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour{
 		this.speed = speed;
 		this.damage = damage;
 		this.direction = direction;
-		explosion = gameObject.GetComponent<Animation> ();
+		//explosion = gameObject.GetComponent<Animation> ();
 		player = GameObject.Find ("Player");
 
 		Vector3 anchor = transform.position + (Vector3)direction;
@@ -39,11 +39,12 @@ public class Projectile : MonoBehaviour{
 		float distanceToPlayer = Vector3.Distance (transform.position, player.transform.position); 
 
 		if(distanceToPlayer > range){
-			explosion.Play();
+			//explosion.Play();
 
-			if(!explosion.isPlaying){
+			/*if(!explosion.isPlaying){
 				Destroy(this.gameObject);
-			}
+			}*/
+			Destroy(this.gameObject);
 		}
 	}
 

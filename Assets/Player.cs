@@ -4,8 +4,36 @@ using System.Collections;
 public class Player : MonoBehaviour 
 {
 	public float speed = 1;
+	public int projectileRange = 100;
 	public GameObject projectile;
 	private float timer = 0f;
+
+	public Dino dinosaur { get; set; }
+
+	void Ascend () {
+		System.Random rnd = new System.Random ();
+		int num = rnd.Next (5);
+
+		switch (num) {
+		case 0: Ascend (new Diplodofortress());
+			break;
+		case 1: Ascend (new Triceratank());
+			break;
+		case 2: Ascend (new Assaultosaurus());
+			break;
+		case 3: Ascend (new Horroraptor());
+			break;
+		case 4: Ascend (new SatanasaurusRex());
+			break;
+		default: Ascend (new Terrordactyl());
+			break;
+		}
+	}
+
+	void Ascend (Dino dino) {
+		this.speed = dino.speed;
+		projectileRange = dino.weapon.range;
+	}
 
 	void Update () {
 		GetMovementInput ();
