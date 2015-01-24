@@ -48,7 +48,7 @@ public class Projectile : MonoBehaviour{
 		}
 	}
 
-	void OnCollisionEnter(Collision enemy){
+	void OnCollisionEnter2D(Collision2D enemy){
 		Debug.Log ("potato");
 
 		if (enemy.transform.tag == "Enemy") {

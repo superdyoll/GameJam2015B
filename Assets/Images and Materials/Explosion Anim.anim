@@ -7,7 +7,7 @@ AnimationClip:
   m_PrefabInternal: {fileID: 0}
   m_Name: Explosion Anim
   serializedVersion: 4
-  m_AnimationType: 2
+  m_AnimationType: 1
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
@@ -175,88 +175,8 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings:
-    - path: 0
-      attribute: 0
-      script: {fileID: 0}
-      classID: 212
-      customType: 23
-      isPPtrCurve: 1
-    pptrCurveMapping:
-    - {fileID: 21300000, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300002, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300004, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300006, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300008, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300010, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300012, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300014, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300016, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300018, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300020, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300022, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300024, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300026, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300028, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300030, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300032, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300034, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300036, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300038, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300040, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300042, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300044, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300046, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300048, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300050, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300052, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300054, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300056, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300058, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300060, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300062, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300064, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300066, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300068, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300070, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300072, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300074, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300076, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300078, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300080, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300082, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300084, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300086, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300088, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300090, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300092, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300094, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300096, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300098, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300100, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300102, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300104, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300106, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300108, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300110, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300112, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300114, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300116, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300118, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300120, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300122, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300124, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300126, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300128, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300130, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300132, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300134, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300136, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300138, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300140, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300142, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300144, guid: 02113f194e4d81249828595500da8e40, type: 3}
-    - {fileID: 21300146, guid: 02113f194e4d81249828595500da8e40, type: 3}
+    genericBindings: []
+    pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0

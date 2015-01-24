@@ -41,9 +41,9 @@ public abstract class Dino : MonoBehaviour {
 		int weaponInt = 1;// for now, there's only one //rnd.Next (5);
 		
 		switch (weaponInt) {
-		case 1: weapon = new Launcher();
+		case 1: weapon = gameObject.AddComponent<Launcher>();
 			break;
-		default: weapon = new Launcher();
+		default: weapon = gameObject.AddComponent<Launcher>();
 			break;
 		}
 
