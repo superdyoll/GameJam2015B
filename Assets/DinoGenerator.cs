@@ -24,6 +24,7 @@ public class DinoGenerator : MonoBehaviour {
 			Vector3 newDinoVector = new Vector3(x,y);
 			GameObject newDino = (GameObject)Instantiate(dinoPrefab, newDinoVector, Quaternion.identity);
 			chooseDino.ChooseRandomDino(newDino);
+			newDino.GetComponent<Dino>().Create();
 			dinosOnScreen.Add(newDino);
 		}
 	}
