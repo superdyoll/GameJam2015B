@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 
 	private void GetMouseInput(){
 		Vector3 mousePosition = GetVect3Rotation ();
-		float rotZ = Mathf.Atan2 (mousePosition.y, mousePosition.x) * Mathf.Rad2Deg; // find the angle in degrees
+		float rotZ = Mathf.Atan2 (mousePosition.y, mousePosition.x) * Mathf.Rad2Deg - 90; // find the angle in degrees
 		transform.rotation = Quaternion.Euler (0f, 0f, rotZ + 90f);
 
 		if (Input.GetMouseButton (0) && timer == 0f) {
