@@ -10,4 +10,5 @@ public class Terrordactyl : Dino {
 	protected override int baseExp           { get { return 2;  } }
 
 	protected override Color colour { get { return new Color (0, 1, 1); } }
+
 }

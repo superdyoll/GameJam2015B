@@ -10,4 +10,5 @@ public class Assaultosaurus : Dino {
 	protected override int baseExp           { get { return 2;  } }
 
 	protected override Color colour { get { return new Color (1, 1, 0.5f); } }
+
 }
