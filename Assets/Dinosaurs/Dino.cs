@@ -39,6 +39,25 @@ public abstract class Dino : MonoBehaviour {
 		} else {
 			AIInitialise ();
 		}
+
+		int weaponInt = 1;// for now, there's only one //rnd.Next (5);
+		
+		switch (weaponInt) {
+		case 1: weapon = gameObject.AddComponent<Launcher>();
+			break;
+		default: weapon = gameObject.AddComponent<Launcher>();
+			break;
+		}
+		weapon.Create ();
+		Debug.Log("Range: "+ weapon.getRange());
+	}
+
+	public int getRange() {
+		if (weapon != null) {
+			return weapon.getRange ();
+		} else {
+			return 0;
+		}
 	}
 
 	private void AIInitialise () {
@@ -56,24 +75,28 @@ public abstract class Dino : MonoBehaviour {
 		} else {
 			level = gameLevel + rndLevel;
 		}
-		
+
 		int weaponInt = 1;// for now, there's only one //rnd.Next (5);
 		
 		switch (weaponInt) {
-		case 1: weapon = gameObject.AddComponent<Launcher>();
+		case 1:
+			weapon = gameObject.AddComponent<Launcher> ();
 			break;
-		default: weapon = gameObject.AddComponent<Launcher>();
+		default:
+			weapon = gameObject.AddComponent<Launcher> ();
 			break;
 		}
+		weapon.Create ();
 
-		health 		= (int)Math.Pow (baseHealth, level);
-		speed 		= (int)Math.Pow (baseSpeed, level);
-		survivability 	= (int)Math.Pow (baseSurvivability, level);
-		explosive 	= (int)Math.Pow (baseExplosive, level);
-		exp 		= (int)Math.Pow (baseExp, level);
+		health = (int)Math.Pow (baseHealth, level);
+		speed = (int)Math.Pow (baseSpeed, level);
+		survivability = (int)Math.Pow (baseSurvivability, level);
+		explosive = (int)Math.Pow (baseExplosive, level);
+		exp = (int)Math.Pow (baseExp, level);
 		gameObject.GetComponent<DinoAI> ().InsertBrain (this);
-		
+
 		Debug.Log ("Base:" + baseSpeed + " level:" + level);
+
 	}
 
 
