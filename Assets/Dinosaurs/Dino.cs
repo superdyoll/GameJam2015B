@@ -84,11 +84,14 @@ public abstract class Dino : MonoBehaviour {
 			Debug.Log("EXP Worth:" + exp);
 		}
 
-		int weaponInt = 1;// for now, there's only one //rnd.Next (5);
+		int weaponInt = UnityEngine.Random.Range(0, 1);// for now, there's only one //rnd.Next (5);
 		
 		switch (weaponInt) {
-		case 1:
+		case 0:
 			weapon = gameObject.AddComponent<Launcher> ();
+			break;
+		case 1:
+			weapon = gameObject.AddComponent<Sniper>();
 			break;
 		default:
 			weapon = gameObject.AddComponent<Launcher> ();

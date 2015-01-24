@@ -338,10 +338,10 @@ GUIText:
   m_PixelOffset: {x: 30, y: -10}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: f8d1cc6412ee9ff45bd3f37fb498b6ee, type: 3}
+  m_Font: {fileID: 12800000, guid: e1589235ac7a44c4bb7bc69af4870f69, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 48
-  m_FontStyle: 0
+  m_FontSize: 100
+  m_FontStyle: 1
   m_Color:
     serializedVersion: 2
     rgba: 4278190307
@@ -531,10 +531,10 @@ GUIText:
   m_PixelOffset: {x: 30, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: f8d1cc6412ee9ff45bd3f37fb498b6ee, type: 3}
+  m_Font: {fileID: 12800000, guid: e1589235ac7a44c4bb7bc69af4870f69, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 36
-  m_FontStyle: 0
+  m_FontSize: 60
+  m_FontStyle: 1
   m_Color:
     serializedVersion: 2
     rgba: 4287364864

@@ -13,6 +13,7 @@ public abstract class Weapon : MonoBehaviour {
 	public int radius { get; set; }
 	public int range { get; set; }
 	public int pointsIn { get; set; }
+	public int bounce { get; set; }
 
 	public int getRange() {
 		return range;

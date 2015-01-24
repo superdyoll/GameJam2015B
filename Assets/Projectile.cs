@@ -56,13 +56,28 @@ public class Projectile : MonoBehaviour{
 	void OnCollisionEnter2D(Collision2D enemy){
 		if (enemy.transform.tag == hostileTo) {
 			enemy.gameObject.GetComponent<Dino>().Damage(damage);
+			GameObject nearestEnemy = null;
+			float distanceToNearestEnemy = 1000f;
 
 			for(int i = 0; i < dinoGenerator.dinosOnScreen.Count; ++i)
 			{
-				if(Vector3.Distance(dinoGenerator.dinosOnScreen[i].transform.position, transform.position) < 10)//radius)
-				{
+				float tempDist = Vector3.Distance(dinoGenerator.dinosOnScreen[i].transform.position, transform.position);
+
+				if(tempDist < 10){//radius){
 					dinoGenerator.dinosOnScreen[i].gameObject.GetComponent<Dino>().Damage(1);
 				}
+
+				if(tempDist < distanceToNearestEnemy){
+					tempDist = distanceToNearestEnemy;
+					nearestEnemy = dinoGenerator.dinosOnScreen[i].gameObject;
+				}
+			}
+			
+			if (bounce > 0) {
+				--bounce;
+				GameObject projectile = (GameObject)Instantiate (player.GetComponent<Player>().projectile, transform.position, Quaternion.identity);
+				Vector3 target = nearestEnemy.transform.position - transform.position;
+				projectile.GetComponent<Projectile>().Go (range, radius, bounce, speed, damage, target, hostileTo);
 			}
 
 			Destroy (gameObject);
