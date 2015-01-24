@@ -66,8 +66,8 @@ public class Projectile : MonoBehaviour{
 			for(int i = 0; i < dinoGenerator.dinosOnScreen.Count; ++i)
 			{
 				float tempDist = Vector3.Distance(dinoGenerator.dinosOnScreen[i].transform.position, transform.position);
-				if(tempDist < 10){//radius){
-					dinoGenerator.dinosOnScreen[i].gameObject.GetComponent<Dino>().Damage(1);
+				if(tempDist < player.GetComponent<Player> ().dinosaur.explosive){//radius){
+					dinoGenerator.dinosOnScreen[i].gameObject.GetComponent<Dino>().Damage(player.GetComponent<Player> ().dinosaur.weapon.damage/2);
 					--i;
 				}
 			}

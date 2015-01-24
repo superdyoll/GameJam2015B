@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
 	private void Fire(){
 		GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
 		Projectile projScript = projInst.GetComponent<Projectile> ();
-		projScript.Go (projectileRange, 10, 1, 10, 5, GetVect3Rotation (), "Enemy");
+		projScript.Go (projectileRange, 10, 1, 10, dinosaur.weapon.damage, GetVect3Rotation (), "Enemy");
 
 	}
 
