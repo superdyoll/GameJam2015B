@@ -66,7 +66,7 @@ public abstract class Dino : MonoBehaviour {
 	}
 
 	private void AIInitialise () {
-		double gameLevel = 1;
+		double gameLevel = Level.getLevel();
 		
 		renderer.material.color = colour;
 		
@@ -81,6 +81,7 @@ public abstract class Dino : MonoBehaviour {
 		} else {
 			level = gameLevel + rndLevel;
 			exp = (int)Math.Pow (baseExp, level);
+			Debug.Log("EXP Worth:" + exp);
 		}
 
 		int weaponInt = 1;// for now, there's only one //rnd.Next (5);
@@ -102,7 +103,7 @@ public abstract class Dino : MonoBehaviour {
 
 		gameObject.GetComponent<DinoAI> ().InsertBrain (this);
 
-		Debug.Log ("Base:" + baseSpeed + " level:" + level);
+		Debug.Log ("Health:" + health + " level:" + level + "EXP: " + exp);
 	}
 
 

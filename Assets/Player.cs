@@ -32,8 +32,11 @@ public class Player : MonoBehaviour
 		GetMovementInput ();
 		GetMouseInput ();
 		UpdateCameraPosition ();
+
 		bloodText = GameObject.Find("BloodScore").GetComponent<GUIText> ();
 		bloodText.text = "" + bloodScore;
+
+		Level.Tick ();
 	}
 
 	public Vector2 GetPosition()
