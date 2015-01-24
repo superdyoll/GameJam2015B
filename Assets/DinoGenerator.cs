@@ -28,4 +28,8 @@ public class DinoGenerator : MonoBehaviour {
 			dinosOnScreen.Add(newDino);
 		}
 	}
+
+	public void RemoveDinosaur (GameObject dinoRemove){
+		dinosOnScreen.Remove (dinoRemove);
+	}
 }
