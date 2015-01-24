@@ -28,6 +28,7 @@ public class Projectile : MonoBehaviour{
 			/*if(!explosion.isPlaying){
 				Destroy(this.gameObject);
 			}*/
+			Destroy(this.gameObject);
 		}
 	}
 }

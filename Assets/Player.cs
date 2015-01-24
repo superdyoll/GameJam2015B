@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Player : MonoBehaviour 
 {
-	public float speed { get; set; }
-	public int projectileRange { get; set; }
+	public float speed = 1;
+	public int projectileRange = 100;
 	public GameObject projectile;
 	private float timer = 0f;
 
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
 	}
 
 	void Ascend (Dino dino) {
-		speed = dino.speed;
+		this.speed = dino.speed;
 		projectileRange = dino.weapon.range;
 	}
 
