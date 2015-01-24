@@ -17,8 +17,6 @@ public class DinoAI : MonoBehaviour {
 	}
 
 	void Update () {
-		Debug.Log ("Potato");
-
 		if(ready){
 			playerPosition = player.GetPosition ();
 			Vector3 currentPosition = new Vector2 (transform.position.x, transform.position.y);
@@ -56,7 +54,7 @@ public class DinoAI : MonoBehaviour {
 			Vector3 positionToTarget = (Vector3)player.GetPosition() - transform.position;
 			GameObject projInst = (GameObject)Instantiate (player.projectile, transform.position + positionToTarget.normalized, Quaternion.identity);
 			Projectile projScript = projInst.GetComponent<Projectile> ();
-			projScript.Go (50, 10, 1, 10, 5, positionToTarget.normalized, "Player");
+			projScript.Go (dinoStats.getRange(), 10, 1, 10, 5, positionToTarget.normalized, "Player");
 		}
 		if(timer + 0.25f < Time.time)
 		{

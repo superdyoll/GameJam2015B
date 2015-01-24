@@ -7,7 +7,7 @@ public class DinoGenerator : MonoBehaviour {
 
 	public int totalDinosaurs = 10;
 	public GameObject dinoPrefab;
-	protected List<GameObject> dinosOnScreen = new List<GameObject>();
+	public List<GameObject> dinosOnScreen = new List<GameObject>();
 	protected DinoSelector chooseDino = new DinoSelector();
 
 	// Use this for initialization

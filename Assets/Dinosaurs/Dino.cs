@@ -20,7 +20,7 @@ public abstract class Dino : MonoBehaviour {
 	public int survivability { get; set; }
 	public int explosive { get; set; }
 	public int exp { get; set; }
-	public GameObject Explosion;
+	public Animation explosion;
 
 	public bool playerControlled { get; set; }
 
@@ -67,7 +67,7 @@ public abstract class Dino : MonoBehaviour {
 	}
 
 	private void AIInitialise () {
-		double gameLevel = 1;
+		double gameLevel = Level.getLevel();
 		
 		renderer.material.color = colour;
 		
@@ -82,6 +82,7 @@ public abstract class Dino : MonoBehaviour {
 		} else {
 			level = gameLevel + rndLevel;
 			exp = (int)Math.Pow (baseExp, level);
+			Debug.Log("EXP Worth:" + exp);
 		}
 
 		int weaponInt = 1;// for now, there's only one //rnd.Next (5);
@@ -103,7 +104,7 @@ public abstract class Dino : MonoBehaviour {
 
 		gameObject.GetComponent<DinoAI> ().InsertBrain (this);
 
-		Debug.Log ("Base:" + baseSpeed + " level:" + level);
+		Debug.Log ("Health:" + health + " level:" + level + "EXP: " + exp);
 	}
 
 
@@ -118,7 +119,8 @@ public abstract class Dino : MonoBehaviour {
 	}
 
 	public void die() {
-		Instantiate (Explosion);
+		Vector3 pos = new Vector3 (transform.position.x, transform.position.y, 0f);
+		Instantiate (explosion, pos, Quaternion.identity);
 
 		player.bloodScore += exp;
 		DinoGenerator dinoThing = GameObject.Find ("Main Camera").GetComponent<DinoGenerator> ();

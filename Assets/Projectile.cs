@@ -5,8 +5,9 @@ public class Projectile : MonoBehaviour{
 	private int range, radius, bounce, speed, damage;
 	private Vector3 direction;
 	private GameObject player;
-	private Animation explosion;
+	public Animation explosion;
 	private string hostileTo;
+	private DinoGenerator dinoGenerator; 
 
 	public void Go(int range, int radius, int bounce, int speed, int damage, Vector2 direction, string hostileTo){
 		this.range = range;
@@ -16,7 +17,7 @@ public class Projectile : MonoBehaviour{
 		this.damage = damage;
 		this.direction = direction;
 		this.hostileTo = hostileTo;
-		explosion = gameObject.GetComponent<Animation> ();
+		explosion = transform.FindChild("ExplosionAnim").GetComponent<Animation> ();
 		player = GameObject.Find ("Player");
 
 		Vector3 anchor = transform.position + (Vector3)direction;
@@ -33,6 +34,8 @@ public class Projectile : MonoBehaviour{
 		Quaternion rot = new Quaternion ();
 		rot.eulerAngles = vectRotation;
 		transform.rotation = rot;
+
+		dinoGenerator = GameObject.Find ("Main Camera").GetComponent<DinoGenerator> ();
 	}
 
 	void Update(){
@@ -44,6 +47,7 @@ public class Projectile : MonoBehaviour{
 			explosion.Play();
 
 			if(!explosion.isPlaying){
+				//Debug.Log ("Potato");
 				Destroy(this.gameObject);
 			}
 		}
@@ -52,6 +56,15 @@ public class Projectile : MonoBehaviour{
 	void OnCollisionEnter2D(Collision2D enemy){
 		if (enemy.transform.tag == hostileTo) {
 			enemy.gameObject.GetComponent<Dino>().Damage(damage);
+
+			for(int i = 0; i < dinoGenerator.dinosOnScreen.Count; ++i)
+			{
+				if(Vector3.Distance(dinoGenerator.dinosOnScreen[i].transform.position, transform.position) < 10)//radius)
+				{
+					dinoGenerator.dinosOnScreen[i].gameObject.GetComponent<Dino>().Damage(1);
+				}
+			}
+
 			Destroy (gameObject);
 		}
 	}
