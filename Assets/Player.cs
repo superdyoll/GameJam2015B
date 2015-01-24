@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Player : MonoBehaviour 
 {
-	public float speed { get; set; }
-	public int projectileRange { get; set; }
+	public float speed = 1;
+	public int projectileRange = 100;
 	public GameObject projectile;
 	private float timer = 0f;
 
@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
 	private void Fire(){
 		GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
 		Projectile projScript = projInst.GetComponent<Projectile> ();
-		projScript.Go (projectileRange, 10, 1, 10, GetVect3Rotation ());
+		projScript.Go (50, 10, 1, 10, 5, GetVect3Rotation ());
 	}
 
 	private void GetMovementInput(){

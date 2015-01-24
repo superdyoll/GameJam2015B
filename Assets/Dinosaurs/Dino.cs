@@ -79,6 +79,7 @@ public abstract class Dino : MonoBehaviour {
 	protected void Update () {
 	}
 
+
 	public void Damage(int amount) {
 		health -= amount;
 		Debug.Log (health);
