@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class Player : MonoBehaviour 
@@ -16,14 +17,21 @@ public class Player : MonoBehaviour
 	public Dino dinosaur { get; set; }
 
 	public float bloodScore = 0;
+	public float bloodTarget;
 	private GUIText bloodText;
 
 	void Ascend () {
 		DinoSelector chooseDino = new DinoSelector ();
 		dinosaur = chooseDino.ChooseRandomDino (gameObject);
 
+		Ascend (dinosaur);
+	}
+
+	void Ascend(Dino dinosaur) {
 		dinosaur.playerControlled = true;
 		dinosaur.Create ();
+
+		bloodTarget = (int)Math.Pow ((20 - dinosaur.survivability) * 1000, Level.getLevel()+1);
 
 		speed = dinosaur.speed;
 		projectileRange = dinosaur.getRange();
@@ -43,7 +51,7 @@ public class Player : MonoBehaviour
 
 		Level.Tick ();
 
-		bloodText.text = bloodScore + " BUCKETS OF BLOOD SPILLED";
+		bloodText.text = bloodScore + " BUCKETS OF BLOOD SPILLED / " + bloodTarget;
 
 		if (health <= 0) {
 			if(upgradeNumber <= numberOfUpgrades){
