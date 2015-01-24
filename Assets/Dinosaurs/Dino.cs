@@ -28,11 +28,6 @@ public abstract class Dino : MonoBehaviour {
 
 	double level { get; set; }
 
-	// Use this for initialization
-	protected void Start () {
-
-	}
-
 	public void Create() {
 		player = GameObject.Find ("Player").GetComponent<Player>();
 
