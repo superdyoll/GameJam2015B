@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  explosion: {fileID: 0}
+  explosion: {fileID: 100000, guid: cc4787e700b788e4592d78e4099cec01, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
