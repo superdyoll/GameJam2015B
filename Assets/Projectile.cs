@@ -65,6 +65,7 @@ public class Projectile : MonoBehaviour{
 
 				if(tempDist < 10){//radius){
 					dinoGenerator.dinosOnScreen[i].gameObject.GetComponent<Dino>().Damage(1);
+					--i;
 				}
 
 				if(tempDist < distanceToNearestEnemy){

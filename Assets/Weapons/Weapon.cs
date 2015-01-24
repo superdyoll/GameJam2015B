@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public abstract class Weapon : MonoBehaviour {
@@ -21,10 +22,12 @@ public abstract class Weapon : MonoBehaviour {
 
 	public void Create() {
 		playerControlled = false;
-		//Debug.Log ("Bleep");
-		range = baseRange + pointsIn;
-		radius = baseRadius + pointsIn;
-		damage = baseDamage + pointsIn;
+
+		range =  (int)Math.Pow (baseRange  + pointsIn, Level.getLevel());
+		radius = (int)Math.Pow (baseRadius + pointsIn, Level.getLevel());
+		damage = (int)Math.Pow (baseDamage + pointsIn, Level.getLevel());
+
+		Debug.Log ("Hurr: " + range);
 	}
 
 	// Use this for initialization

@@ -3,7 +3,7 @@ using System.Collections;
 
 public static class Level{
 	private static int level = 0;
-	private static int timer = 600;
+	private static int timer = 1200;
 	private static GUIText levelText = GameObject.Find("Level").GetComponent<GUIText> ();
 
 	public static void Tick() {
@@ -15,7 +15,7 @@ public static class Level{
 
 	public static void LevelUp() {
 		level++;
-		timer = 600;
+		timer = 1200;
 		levelText.text = "Annihilation Level: " + level;
 	}
 

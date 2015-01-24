@@ -9,6 +9,7 @@ public class DinoGenerator : MonoBehaviour {
 	public GameObject dinoPrefab;
 	public List<GameObject> dinosOnScreen = new List<GameObject>();
 	protected DinoSelector chooseDino = new DinoSelector();
+	public GameObject explosion;
 
 	// Use this for initialization
 	void Start () {
