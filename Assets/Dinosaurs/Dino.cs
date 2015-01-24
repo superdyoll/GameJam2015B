@@ -20,7 +20,7 @@ public abstract class Dino : MonoBehaviour {
 	public int survivability { get; set; }
 	public int explosive { get; set; }
 	public int exp { get; set; }
-	public Animation explosion;
+	public GameObject explosion;
 
 	public bool playerControlled { get; set; }
 
@@ -124,6 +124,7 @@ public abstract class Dino : MonoBehaviour {
 	public void die() {
 		Vector3 pos = new Vector3 (transform.position.x, transform.position.y, 0f);
 		Instantiate (explosion, pos, Quaternion.identity);
+		explosion.animation.Play();
 
 		player.bloodScore += exp;
 		DinoGenerator dinoThing = GameObject.Find ("Main Camera").GetComponent<DinoGenerator> ();
