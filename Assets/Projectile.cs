@@ -62,12 +62,15 @@ public class Projectile : MonoBehaviour{
 			for(int i = 0; i < dinoGenerator.dinosOnScreen.Count; ++i)
 			{
 				float tempDist = Vector3.Distance(dinoGenerator.dinosOnScreen[i].transform.position, transform.position);
-
 				if(tempDist < 10){//radius){
 					dinoGenerator.dinosOnScreen[i].gameObject.GetComponent<Dino>().Damage(1);
 					--i;
 				}
+			}
 
+			for(int i = 0; i < dinoGenerator.dinosOnScreen.Count; ++i)
+			{
+				float tempDist = Vector3.Distance(dinoGenerator.dinosOnScreen[i].transform.position, transform.position);
 				if(tempDist < distanceToNearestEnemy){
 					tempDist = distanceToNearestEnemy;
 					nearestEnemy = dinoGenerator.dinosOnScreen[i -1].gameObject;
