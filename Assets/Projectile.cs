@@ -6,15 +6,17 @@ public class Projectile : MonoBehaviour{
 	private Vector3 direction;
 	private GameObject player;
 	private Animation explosion;
+	private string hostileTo;
 
-	public void Go(int range, int radius, int bounce, int speed, int damage, Vector2 direction){
+	public void Go(int range, int radius, int bounce, int speed, int damage, Vector2 direction, string hostileTo){
 		this.range = range;
 		this.radius = radius;
 		this.bounce = bounce;
 		this.speed = speed;
 		this.damage = damage;
 		this.direction = direction;
-		//explosion = gameObject.GetComponent<Animation> ();
+		this.hostileTo = hostileTo;
+		explosion = gameObject.GetComponent<Animation> ();
 		player = GameObject.Find ("Player");
 
 		Vector3 anchor = transform.position + (Vector3)direction;
@@ -39,12 +41,11 @@ public class Projectile : MonoBehaviour{
 		float distanceToPlayer = Vector3.Distance (transform.position, player.transform.position); 
 
 		if(distanceToPlayer > range){
-			//explosion.Play();
+			explosion.Play();
 
-			/*if(!explosion.isPlaying){
+			if(!explosion.isPlaying){
 				Destroy(this.gameObject);
-			}*/
-			DestroyMissile();
+			}
 		}
 	}
 
@@ -53,9 +54,7 @@ public class Projectile : MonoBehaviour{
 	}
 
 	void OnCollisionEnter2D(Collision2D enemy){
-		Debug.Log ("potato");
-
-		if (enemy.transform.tag == "Enemy") {
+		if (enemy.transform.tag == hostileTo) {
 			enemy.gameObject.GetComponent<Dino>().Damage(damage);
 			Destroy (gameObject);
 		}

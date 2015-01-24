@@ -11,31 +11,9 @@ public class Player : MonoBehaviour
 	public Dino dinosaur { get; set; }
 
 	void Ascend () {
-		System.Random rnd = new System.Random ();
-		int num = rnd.Next (5);
+		DinoSelector chooseDino = new DinoSelector ();
+		dinosaur = chooseDino.ChooseRandomDino ();
 
-		if (dinosaur == null) {
-			switch (num) {
-			case 0:
-				dinosaur = gameObject.AddComponent<Diplodofortress> ();
-				break;
-			case 1:
-				dinosaur = gameObject.AddComponent<Triceratank> ();
-				break;
-			case 2:
-				dinosaur = gameObject.AddComponent<Assaultosaurus> ();
-				break;
-			case 3:
-				dinosaur = gameObject.AddComponent<Horroraptor> ();
-				break;
-			case 4:
-				dinosaur = gameObject.AddComponent<SatanasaurusRex> ();
-				break;
-			default:
-				dinosaur = gameObject.AddComponent<Terrordactyl> ();
-				break;
-			}
-		}
 		dinosaur.playerControlled = true;
 		dinosaur.Create ();
 
@@ -88,7 +66,9 @@ public class Player : MonoBehaviour
 	private void Fire(){
 		GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
 		Projectile projScript = projInst.GetComponent<Projectile> ();
-		projScript.Go (projectileRange, 10, 1, 10, 5, GetVect3Rotation ());
+
+		projScript.Go (projectileRange, 10, 1, 10, 5, GetVect3Rotation (), "Enemy");
+
 	}
 
 	private void GetMovementInput(){

@@ -5,21 +5,48 @@ public class DinoAI : MonoBehaviour {
 	private Dino dinoStats;
 	private Vector3 playerPosition;
 	private Player player;
+	private bool ready = false;
+	private Vector3 movingDirection;
+	private float timer = 0f;
 
 	public void InsertBrain (Dino dinoStats) {
 		this.dinoStats = dinoStats;
 		player = GameObject.Find ("Player").GetComponent<Player> ();
+		movingDirection = new Vector3 (Random.Range (-1.00f, 1.00f), Random.Range (-1.00f, 1.00f), 0f);
+		ready = true;
 	}
 
 	void Update () {
-		playerPosition = player.GetPosition ();
-		Vector3 currentPosition = new Vector2 (transform.position.x, transform.position.y);
-		float distanceToPlayer = Vector2.Distance (playerPosition, currentPosition);
+		if(ready){
+			playerPosition = player.GetPosition ();
+			Vector3 currentPosition = new Vector2 (transform.position.x, transform.position.y);
+			float distanceToPlayer = Vector2.Distance (playerPosition, currentPosition);
 
-		//if(distanceToPlayer > dinoStats.weapon.range){
-			Vector3 directionToPlayer = playerPosition - currentPosition;
-			directionToPlayer.Normalize ();
-			transform.position += 0.1f * dinoStats.speed * directionToPlayer;
-		//}
+			if(distanceToPlayer > dinoStats.weapon.range + 1){
+				Vector3 directionToPlayer = playerPosition - currentPosition;
+				directionToPlayer.Normalize ();
+				float moveDirMod = -0.008f * distanceToPlayer + 1.4f;
+				transform.position += 0.1f * dinoStats.speed * (directionToPlayer + (movingDirection * moveDirMod / 1.2f));
+			}
+			if(distanceToPlayer < 50){//dinoStats.weapon.range){
+				FireWeapon();
+			}
+		}
+	}
+
+	private void FireWeapon(){
+		if (timer == 0f) {
+			timer = Time.time;
+			Vector3 positionToTarget = (Vector3)player.GetPosition() - transform.position;
+			GameObject projInst = (GameObject)Instantiate (player.projectile, transform.position + positionToTarget.normalized, Quaternion.identity);
+			Projectile projScript = projInst.GetComponent<Projectile> ();
+			projScript.Go (50, 10, 1, 10, 5, positionToTarget.normalized, "Player");
+		}
+		if(timer + 0.25f < Time.time)
+		{
+			timer = 0f;
+		}
 	}
 }
+
+

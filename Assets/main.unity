@@ -311,7 +311,11 @@ GameObject:
   - 114: {fileID: 1282715835}
   - 50: {fileID: 1282715840}
   - 61: {fileID: 1282715837}
+<<<<<<< HEAD
+  - 114: {fileID: 1282715841}
+=======
   - 212: {fileID: 1282715836}
+>>>>>>> f67859b576c29bea66a7629a02e4c2d2d6a504c1
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -330,6 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4efb943c1902e04cba2836849b9c436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
 --- !u!212 &1282715836
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -390,6 +395,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &1282715841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1282715834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885ec3ad06de6604bacfd64d25283f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1788235295
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +421,7 @@ GameObject:
   - 50: {fileID: 1788235299}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

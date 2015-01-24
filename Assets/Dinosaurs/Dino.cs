@@ -75,16 +75,29 @@ public abstract class Dino : MonoBehaviour {
 		} else {
 			level = gameLevel + rndLevel;
 		}
+
+		int weaponInt = 1;// for now, there's only one //rnd.Next (5);
 		
-		Debug.Log ("Base:" + baseSpeed + " level:" + level);
-		
-		health 		  = (int)Math.Pow (baseHealth, level);
-		speed 		  = (int)Math.Pow (baseSpeed, level);
+		switch (weaponInt) {
+		case 1:
+			weapon = gameObject.AddComponent<Launcher> ();
+			break;
+		default:
+			weapon = gameObject.AddComponent<Launcher> ();
+			break;
+		}
+		weapon.Create ();
+
+		health = (int)Math.Pow (baseHealth, level);
+		speed = (int)Math.Pow (baseSpeed, level);
 		survivability = (int)Math.Pow (baseSurvivability, level);
-		explosive 	  = (int)Math.Pow (baseExplosive, level);
-		exp 		  = (int)Math.Pow (baseExp, level);
+		explosive = (int)Math.Pow (baseExplosive, level);
+		exp = (int)Math.Pow (baseExp, level);
+		gameObject.GetComponent<DinoAI> ().InsertBrain (this);
+
+		Debug.Log ("Base:" + baseSpeed + " level:" + level);
 	}
-	
+
 	// Update is called once per frame
 	protected void Update () {
 	}
@@ -92,7 +105,6 @@ public abstract class Dino : MonoBehaviour {
 
 	public void Damage(int amount) {
 		health -= amount;
-		Debug.Log (health);
 		if (health <= 0) {
 			this.die();
 		}
