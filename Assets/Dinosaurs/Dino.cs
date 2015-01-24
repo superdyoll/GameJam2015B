@@ -107,6 +107,8 @@ public abstract class Dino : MonoBehaviour {
 	}
 
 	public void die() {
+		DinoGenerator dinoThing = GameObject.Find ("Main Camera").GetComponent<DinoGenerator> ();
+		dinoThing.RemoveDinosaur (this.gameObject);
 		Destroy (this.gameObject);
 
 		//Add explosion stuff here
