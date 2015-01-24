@@ -20,7 +20,7 @@ public abstract class Dino : MonoBehaviour {
 	public int survivability { get; set; }
 	public int explosive { get; set; }
 	public int exp { get; set; }
-	public Animation explosion;
+	public GameObject explosion;
 
 	public bool playerControlled { get; set; }
 
