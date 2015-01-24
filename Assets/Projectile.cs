@@ -48,6 +48,10 @@ public class Projectile : MonoBehaviour{
 		}
 	}
 
+	void DestroyMissile(){
+		Destroy (this.gameObject);
+	}
+
 	void OnCollisionEnter2D(Collision2D enemy){
 		Debug.Log ("potato");
 
