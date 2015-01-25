@@ -20,8 +20,7 @@ public abstract class Dino : MonoBehaviour {
 	public int survivability { get; set; }
 	public int explosive { get; set; }
 	public int exp { get; set; }
-	public GameObject explosion;
-
+	
 	public bool playerControlled { get; set; }
 
 	private Player player;
@@ -116,6 +115,17 @@ public abstract class Dino : MonoBehaviour {
 		player.bloodScore += (exp / 10) * 666;
 
 		if (health <= 0) {
+			for(int i = 0; i < UnityEngine.Random.Range(0, 15); ++i)
+			{
+				Vector3 pos = new Vector3(UnityEngine.Random.Range(transform.position.x - 0.75f, transform.position.x + 0.75f), UnityEngine.Random.Range (transform.position.y - 0.75f, transform.position.y + 0.75f), 0f);
+				float zRot = UnityEngine.Random.Range (0, 360);
+				Vector3 eulerRot = new Vector3(0f, 0f, zRot);
+				Quaternion quatRot = new Quaternion();
+				quatRot.eulerAngles = eulerRot;
+				GameObject temp = (GameObject)Instantiate (GameObject.Find ("Main Camera").GetComponent<DinoGenerator>().bloodSplat, pos, quatRot);
+				float randScale = UnityEngine.Random.Range(0, 25) / 10f;
+				temp.transform.localScale = new Vector3(randScale, randScale, 0f);
+			}
 			this.die();
 		}
 	}

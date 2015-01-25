@@ -97,7 +97,7 @@ public class Player : MonoBehaviour
 				Destroy (overlay.gameObject);
 			} else {
 				Instantiate (overlay);
-				DestroyImmediate (pauseOverlay.gameObject);
+				Destroy (pauseOverlay.gameObject);
 			}
 			enterPause = false;
 		}
