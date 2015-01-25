@@ -42,7 +42,7 @@ public class Projectile : MonoBehaviour{
 		transform.position += direction * speed * 0.06f;
 
 		float distanceToPlayer = Vector3.Distance (transform.position, player.transform.position); 
-		Debug.Log ("ty " + distanceToPlayer + " range " + range);
+
 		if(distanceToPlayer > range){
 			//explosion.Play();
 
@@ -81,6 +81,9 @@ public class Projectile : MonoBehaviour{
 
 			Destroy (gameObject);
 			Debug.Log("Destroyed bullet");
+		}
+		else { //Must be YOU!!!
+			player.GetComponent<Player>().Damage(damage);
 		}
 	}
 }

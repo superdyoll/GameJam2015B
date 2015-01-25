@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 	private float timer = 0f;
 
 	public int health = 100;
+	public int startHealth;
 
 	public int numberOfUpgrades = 5;
 	protected int upgradeNumber = 0;
@@ -18,7 +19,9 @@ public class Player : MonoBehaviour
 
 	public float bloodScore = 0;
 	public float bloodTarget;
+
 	private GUIText bloodText;
+	private GUITexture healthbar;
 
 	void Ascend () {
 		DinoSelector chooseDino = new DinoSelector ();
@@ -32,6 +35,8 @@ public class Player : MonoBehaviour
 		dinosaur.Create ();
 
 		bloodTarget = (int)Math.Pow ((20 - dinosaur.survivability) * 1000, Level.getLevel()+1);
+		startHealth = health;
+		UpdateHealthbar ();
 
 		speed = dinosaur.speed;
 		projectileRange = dinosaur.getRange();
@@ -135,15 +140,27 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	private void UpdateHealthbar() {
+		healthbar = GameObject.Find ("HealthBar").GetComponent<GUITexture> ();
+
+		float percentage = (float) health / startHealth;
+		float move = percentage - 1;
+
+		healthbar.transform.position = new Vector2(move, 0);
+	}
+
 	public void Damage(int amount) {
 		health -= amount;
-				
+
 		if (health <= 0) {
-			Kill();
+			Kill ();
+		} else {
+			UpdateHealthbar ();
 		}
 	}
 
 	private void Kill(){
-		Destroy (this.gameObject);
+		healthbar.transform.position = new Vector2 (-0.99f, 0); //Meant to make it vanish - the bugger won't go away
+		Debug.Log ("Dead");
 	}
 }

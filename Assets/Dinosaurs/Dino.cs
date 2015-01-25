@@ -50,7 +50,7 @@ public abstract class Dino : MonoBehaviour {
 			break;
 		}
 		weapon.Create ();
-		Debug.Log("Range: "+ weapon.getRange());
+		//Debug.Log("Range: "+ weapon.getRange());
 	}
 
 	public int getRange() {
@@ -77,7 +77,7 @@ public abstract class Dino : MonoBehaviour {
 		} else {
 			level = gameLevel + rndLevel;
 			exp = (int)Math.Pow (baseExp, level);
-			Debug.Log("EXP Worth:" + exp);
+			//Debug.Log("EXP Worth:" + exp);
 		}
 
 		int weaponInt = UnityEngine.Random.Range(0, 1);// for now, there's only one //rnd.Next (5);
@@ -102,7 +102,7 @@ public abstract class Dino : MonoBehaviour {
 
 		gameObject.GetComponent<DinoAI> ().InsertBrain (this);
 
-		Debug.Log ("Health:" + health + " level:" + level + "EXP: " + exp);
+		//Debug.Log ("Health:" + health + " level:" + level + "EXP: " + exp);
 	}
 
 

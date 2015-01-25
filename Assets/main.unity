@@ -188,6 +188,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shake_decay: 1.00000001e-07
   shake_intensity: 0
+--- !u!1 &146967353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 146967355}
+  - 131: {fileID: 146967354}
+  - 114: {fileID: 146967356}
+  m_Layer: 0
+  m_Name: HealthBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!131 &146967354
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146967353}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: 08a0882f0f1c9ef48a7cc3c225bfee12, type: 3}
+  m_Color: {r: .5, g: .5, b: .5, a: .5}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 510
+    height: 48
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
+--- !u!4 &146967355
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146967353}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+--- !u!114 &146967356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146967353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a7178894ff3824fb1439054a9e5ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: .75
+  pos: {x: .670000017, y: .0199999996}
+  size: {x: 256, y: 256}
+  emptyTex: {fileID: 0}
+  fullTex: {fileID: 0}
 --- !u!1 &283086345
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +626,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 968243051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .100000001, z: 0}
+  m_LocalPosition: {x: 0, y: .180000007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -878,6 +942,7 @@ MonoBehaviour:
   projectileRange: 100
   projectile: {fileID: 100000, guid: 2cc9d66016a3f474c9c909db318c6bf0, type: 2}
   health: 100
+  startHealth: 0
   numberOfUpgrades: 5
   bloodScore: 0
   bloodTarget: 0
@@ -994,7 +1059,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1929569774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 1.00000024, y: -4.76837592e-09, z: -8.20159912e-05}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 356856506}

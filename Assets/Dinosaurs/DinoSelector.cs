@@ -5,7 +5,7 @@ public class DinoSelector {
 	public Dino ChooseRandomDino(GameObject currentDinosaur){
 		Dino dinosaur = null;
 		int num = Random.Range(0, 4);
-		Debug.Log (num + "");
+		//Debug.Log (num + "");
 
 		switch (num) {
 		case 0:
