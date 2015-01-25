@@ -219,7 +219,7 @@ GUIText:
   m_GameObject: {fileID: 204768141}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: GAME OVER
+  m_Text: Game over
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
@@ -227,7 +227,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: e1589235ac7a44c4bb7bc69af4870f69, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 164
+  m_FontSize: 140
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -645,7 +645,7 @@ GUIText:
   m_GameObject: {fileID: 702198904}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Gui Text
+  m_Text: GUI text
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
