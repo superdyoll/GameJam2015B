@@ -14,7 +14,7 @@ public class DinoGenerator : MonoBehaviour {
 	public GameObject triceratankPrefab;
 	public List<GameObject> dinosOnScreen = new List<GameObject>();
 	protected DinoSelector chooseDino = new DinoSelector();
-	public GameObject explosion;
+	public GameObject explosion, bloodSplat;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +29,9 @@ public class DinoGenerator : MonoBehaviour {
 			Vector3 newDinoVector = new Vector3(x,y);
 			int num = Random.Range(0, 5);
 			GameObject newDino;
+			float scaleFl = Random.Range (80, 120) / 300f;
+			Vector3 scale = new Vector3(scaleFl, scaleFl, 1);
+			Debug.Log (scale);
 			switch (num) {
 			case 0:
 				newDino = (GameObject)Instantiate(diplodofortressPrefab, newDinoVector, Quaternion.identity);
@@ -52,6 +55,7 @@ public class DinoGenerator : MonoBehaviour {
 				newDino = (GameObject)Instantiate(diplodofortressPrefab, newDinoVector, Quaternion.identity);
 				break;
 			}
+			newDino.transform.localScale = scale;
 			chooseDino.ChooseRandomDino(newDino, num);
 			newDino.GetComponent<Dino>().Create();
 			dinosOnScreen.Add(newDino);

@@ -4,7 +4,7 @@ using System.Collections;
 public class Terrordactyl : Dino {
 	
 	protected override int baseHealth        { get { return 4; } }
-	protected override int baseSpeed         { get { return 8;  } }
+	protected override int baseSpeed         { get { return 4;  } }
 	protected override int baseSurvivability { get { return 4;  } }
 	protected override int baseExplosive     { get { return 6;  } }
 

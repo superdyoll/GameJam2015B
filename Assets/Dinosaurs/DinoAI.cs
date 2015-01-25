@@ -8,7 +8,7 @@ public class DinoAI : MonoBehaviour {
 	private bool ready = false;
 	private Vector3 movingDirection;
 	private float timer = 0.5f;
-	public float delay = 0.25f;
+	private float delay = 0.25f;
 
 	public void InsertBrain (Dino dinoStats) {
 		this.dinoStats = dinoStats;
@@ -23,7 +23,7 @@ public class DinoAI : MonoBehaviour {
 			Vector3 currentPosition = new Vector2 (transform.position.x, transform.position.y);
 			float distanceToPlayer = Vector2.Distance (playerPosition, currentPosition);
 
-			if(distanceToPlayer > 20f){
+			if(distanceToPlayer > 5f){
 				Vector3 directionToPlayer = playerPosition - currentPosition;
 				directionToPlayer.Normalize ();
 				float moveDirMod = -0.008f * distanceToPlayer + 1.4f;
@@ -52,7 +52,7 @@ public class DinoAI : MonoBehaviour {
 	private void FireWeapon(){
 		if (timer == 0f) {
 			timer = Time.time;
-			delay = ((float)Random.Range(20,50)) / 100f;
+			delay = ((float)Random.Range(40,70)) / 100f;
 			Debug.Log("Delay:" + delay);
 			Vector3 positionToTarget = (Vector3)player.GetPosition() - transform.position;
 			GameObject projInst = (GameObject)Instantiate (player.projectile, transform.position + positionToTarget.normalized, Quaternion.identity);

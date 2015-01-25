@@ -182,6 +182,7 @@ MonoBehaviour:
   triceratankPrefab: {fileID: 100000, guid: 7b73af4ade3bff74c8fa5438c4c9d056, type: 2}
   dinosOnScreen: []
   explosion: {fileID: 100000, guid: cc4787e700b788e4592d78e4099cec01, type: 2}
+  bloodSplat: {fileID: 100000, guid: 5276ff992c885ff4f88dfbce1535b4b7, type: 2}
 --- !u!114 &30083230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,7 +672,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &968243051
 GameObject:
   m_ObjectHideFlags: 0
