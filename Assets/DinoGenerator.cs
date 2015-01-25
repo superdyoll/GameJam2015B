@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class DinoGenerator : MonoBehaviour {
 
-	public int totalDinosaurs;
+	private int totalDinosaurs = 10;
 	public GameObject assaultosaurusPrefab;
 	public GameObject diplodofortressPrefab;
 	public GameObject horroraptorPrefab;
@@ -18,6 +18,7 @@ public class DinoGenerator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		totalDinosaurs = Level.getLevel () * 4;
 		if (dinosOnScreen.Count <= totalDinosaurs){
 			int x = Random.Range(0, 50);
 			int y = Random.Range(0, 50);
