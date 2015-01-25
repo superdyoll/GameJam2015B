@@ -14,6 +14,7 @@ public class Launcher : Weapon {
 			} 
 			return Screen.height /50;
 		} }
+	protected override int baseProjectileCount {get {return 1;}}
 
 	// Use this for initialization
 	void Start () {

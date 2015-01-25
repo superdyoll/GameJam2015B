@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 	public Material sovietRed, isaBlue;
 	private float timer = 0f;
 
-	public int health, startHealth, projectileCount = 4;
+	public int health, startHealth;
 
 	public int numberOfUpgrades = 5;
 	protected int upgradeNumber = 0;
@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
 	public GameObject overlay, pauseOverlay;
 	private Boolean onPause = false, enterPause = true;
 
-Texture2D cursorTexture;
+	Texture2D cursorTexture;
 	CursorMode cursorMode  = CursorMode.Auto;
 	Vector2 hotSpot = Vector2.zero;
 
@@ -63,8 +63,6 @@ Texture2D cursorTexture;
 	}
 
 	void Start() {
-
-		
 		overlay.SetActive (true);
 		pauseOverlay.SetActive (true);
 
@@ -143,12 +141,12 @@ Texture2D cursorTexture;
 	}
 
 	private void Fire(){
-		for(int i = 0; i < projectileCount; ++i)
+		for(int i = 0; i < dinosaur.weapon.numberOfProjectiles; ++i)
 		{
 			GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
 			Projectile projScript = projInst.GetComponent<Projectile> ();
 			Vector3 pos = new Vector3 (UnityEngine.Random.Range (GetVect3Rotation().x - 0.2f, GetVect3Rotation().x + 0.2f), UnityEngine.Random.Range (GetVect3Rotation().y -0.2f, GetVect3Rotation().y +0.2f), 0f);
-			projScript.Go (projectileRange, 10, 1, 6, dinosaur.weapon.damage, pos.normalized, "Enemy", dinosaur);
+			projScript.Go (projectileRange, 10, 1, 4, dinosaur.weapon.damage, pos.normalized, "Enemy", dinosaur);
 			projInst.GetComponent<TrailRenderer> ().material = isaBlue;
 		}
 	}
@@ -235,6 +233,10 @@ Texture2D cursorTexture;
 		if (Input.GetKey(KeyCode.KeypadEnter) || Input.GetKey ("enter") || Input.GetKey ("return")){ 
 			if (onPause){
 				Time.timeScale = 1;
+				Level.setLevel(0);
+
+				bloodScore = bloodTarget = 0;
+
 				Application.LoadLevel (Application.loadedLevelName);
 			}
 		}

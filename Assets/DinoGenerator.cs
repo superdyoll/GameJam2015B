@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class DinoGenerator : MonoBehaviour {
 
-	public int totalDinosaurs = 10;
+	public int totalDinosaurs;
 	public GameObject assaultosaurusPrefab;
 	public GameObject diplodofortressPrefab;
 	public GameObject horroraptorPrefab;
@@ -15,11 +15,6 @@ public class DinoGenerator : MonoBehaviour {
 	public List<GameObject> dinosOnScreen = new List<GameObject>();
 	protected DinoSelector chooseDino = new DinoSelector();
 	public GameObject explosion, bloodSplat;
-
-	// Use this for initialization
-	void Start () {
-			
-	}
 	
 	// Update is called once per frame
 	void Update () {

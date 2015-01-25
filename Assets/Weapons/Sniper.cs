@@ -14,4 +14,5 @@ public class Sniper : Weapon {
 			return Screen.height /50;
 		} }
 	protected int baseBounce { get {return 4;}}
+	protected override int baseProjectileCount { get { return 1; } }
 }
