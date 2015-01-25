@@ -47,8 +47,8 @@ public class Projectile : MonoBehaviour{
 			//explosion.Play();
 
 			//if(!explosion.isPlaying){
-				//Debug.Log ("Destroyed bullet after range");
-				Destroy(this.gameObject);
+				Debug.Log ("Destroyed bullet after range");
+				//Destroy(this.gameObject);
 			//}
 		}
 	}
@@ -80,9 +80,9 @@ public class Projectile : MonoBehaviour{
 			}
 
 			if (enemy.transform.tag == "enemy") {
-				Destroy (this.gameObject);
+				//Destroy (this.gameObject);
 			}
-			//Debug.Log("Destroyed bullet");
+			Debug.Log("Destroyed bullet");
 		}
 	}
 }
