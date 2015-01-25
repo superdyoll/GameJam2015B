@@ -7,6 +7,7 @@ public abstract class Weapon : MonoBehaviour {
 	abstract protected int baseDamage { get; }
 	abstract protected int baseRadius { get; }
 	abstract protected int baseRange  { get; }
+	abstract protected int baseProjectileCount { get; }
 
 	public bool playerControlled{ get; set; }
 
@@ -15,6 +16,7 @@ public abstract class Weapon : MonoBehaviour {
 	public int range { get; set; }
 	public int pointsIn { get; set; }
 	public int bounce { get; set; }
+	public int numberOfProjectiles { get; set; }
 
 	public int getRange() {
 		return range;
@@ -26,6 +28,7 @@ public abstract class Weapon : MonoBehaviour {
 		range =  baseRange  + pointsIn;
 		radius = baseRadius + pointsIn;
 		damage = baseDamage + pointsIn;
+		numberOfProjectiles = baseProjectileCount;// + pointsIn;
 
 		//Debug.Log ("Hurr: " + range);
 	}

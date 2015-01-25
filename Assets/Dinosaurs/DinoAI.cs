@@ -54,12 +54,15 @@ public class DinoAI : MonoBehaviour {
 			timer = Time.time;
 			delay = ((float)Random.Range(20, 50)) / 100f;
 			//Debug.Log("Delay:" + delay);
-			Vector3 positionToTarget = (Vector3)player.GetPosition() - transform.position;
-			positionToTarget = new Vector3(Random.Range (positionToTarget.x - 5, positionToTarget.x + 5), Random.Range (positionToTarget.y - 5, positionToTarget.y + 5), 0f);
-			GameObject projInst = (GameObject)Instantiate (player.projectile, transform.position + positionToTarget.normalized, Quaternion.identity);
-			Projectile projScript = projInst.GetComponent<Projectile> ();
-			projScript.Go (dinoStats.getRange(), 10, 10, 6, dinoStats.weapon.damage / 3, positionToTarget.normalized, "Player", dinoStats);
-			projInst.GetComponent<TrailRenderer>().material = player.sovietRed;
+
+			for(int i = 0; i < dinoStats.weapon.numberOfProjectiles; ++i){
+				Vector3 positionToTarget = (Vector3)player.GetPosition() - transform.position;
+				positionToTarget = new Vector3(Random.Range (positionToTarget.x - 5, positionToTarget.x + 5), Random.Range (positionToTarget.y - 5, positionToTarget.y + 5), 0f);
+				GameObject projInst = (GameObject)Instantiate (player.projectile, transform.position + positionToTarget.normalized, Quaternion.identity);
+				Projectile projScript = projInst.GetComponent<Projectile> ();
+				projScript.Go (dinoStats.getRange(), 10, 10, 4, dinoStats.weapon.damage / 3, positionToTarget.normalized, "Player", dinoStats);
+				projInst.GetComponent<TrailRenderer>().material = player.sovietRed;
+			}
 		}
 		if(timer + delay < Time.time)
 		{

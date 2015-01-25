@@ -92,8 +92,6 @@ public class Projectile : MonoBehaviour{
 			}
 
 			RemoveProjectile();
-			
-			Debug.Log("Destroyed bullet");
 		}
 	}
 

@@ -29,6 +29,7 @@ public abstract class Dino : MonoBehaviour {
 
 	public void Create() {
 		player = GameObject.Find ("Player").GetComponent<Player>();
+		GrabWeapon ();
 
 		if (playerControlled) {
 			health = baseHealth;
@@ -40,15 +41,6 @@ public abstract class Dino : MonoBehaviour {
 			AIInitialise ();
 		}
 
-		int weaponInt = 1;// for now, there's only one //rnd.Next (5);
-		
-		switch (weaponInt) {
-		case 1: weapon = gameObject.AddComponent<Launcher>();
-			break;
-		default: weapon = gameObject.AddComponent<Launcher>();
-			break;
-		}
-		weapon.Create ();
 		//Debug.Log("Range: "+ weapon.getRange());
 
 		/*Vector2 S = gameObject.GetComponent<SpriteRenderer> ().sprite.bounds.size;
@@ -62,6 +54,26 @@ public abstract class Dino : MonoBehaviour {
 		} else {
 			return 0;
 		}
+	}
+
+	private void GrabWeapon(){
+		int weaponInt = UnityEngine.Random.Range(0, 3);// for now, there's only one //rnd.Next (5);
+		
+		switch (weaponInt) {
+		case 0:
+			weapon = gameObject.AddComponent<Launcher> ();
+			break;
+		case 1:
+			weapon = gameObject.AddComponent<Sniper>();
+			break;
+		case 2:
+			weapon = gameObject.AddComponent<Shotgun>();
+			break;
+		default:
+			weapon = gameObject.AddComponent<Launcher> ();
+			break;
+		}
+		weapon.Create ();
 	}
 
 	private void AIInitialise () {
@@ -82,21 +94,6 @@ public abstract class Dino : MonoBehaviour {
 			exp = (int) (baseExp *  level + 1);
 			//Debug.Log("EXP Worth:" + exp);
 		}
-
-		int weaponInt = UnityEngine.Random.Range(0, 1);// for now, there's only one //rnd.Next (5);
-		
-		switch (weaponInt) {
-		case 0:
-			weapon = gameObject.AddComponent<Launcher> ();
-			break;
-		case 1:
-			weapon = gameObject.AddComponent<Sniper>();
-			break;
-		default:
-			weapon = gameObject.AddComponent<Launcher> ();
-			break;
-		}
-		weapon.Create ();
 
 		health = (int) (baseHealth * level);
 		speed = (int) (baseSpeed * level);
