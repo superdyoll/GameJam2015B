@@ -66,11 +66,19 @@ public class DinoSelector {
 			currentDinosaur.AddComponent<SatanasaurusRex>();
 			dinosaur = currentDinosaur.GetComponent<SatanasaurusRex>();
 			break;
+		case 5:
+			currentDinosaur.AddComponent<Terrordactyl>();
+			dinosaur = currentDinosaur.GetComponent<Terrordactyl>();
+			break;
 		default:
 			currentDinosaur.AddComponent<Terrordactyl>();
 			dinosaur = currentDinosaur.GetComponent<Terrordactyl>();
 			break;
 		}
+
+		Sprite spriteImage = currentDinosaur.GetComponent<SpriteRenderer> ().sprite;
+		SpriteRenderer sr = dinosaur.gameObject.GetComponent<SpriteRenderer>();
+		sr.sprite = spriteImage;
 		
 		return dinosaur;
 	}

@@ -37,20 +37,23 @@ public class Player : MonoBehaviour
 	void Ascend () {
 		DinoSelector chooseDino = new DinoSelector ();
 		dinosaur = chooseDino.ChooseRandomDino (gameObject);
-
+		Debug.Log ("Dino to be passed:" + dinosaur.gameObject.name);
 		Ascend (dinosaur);
 	}
 
 	void Ascend(Dino dinosaur) {
+		Debug.Log ("New Dino: " + dinosaur.gameObject.name);
 		dinosaur.playerControlled = true;
 		dinosaur.Create ();
 
-		bloodTarget = ((20 - dinosaur.survivability) * 100 * Level.getLevel()+1 * Level.getLevel()+1) * 666;
+		bloodTarget = ((20 - dinosaur.survivability) * 100 * Level.getLevel()+1) * 666;
 		startHealth = health = dinosaur.health * 20;
 		UpdateHealthbar ();
 
-		spriteImage = GetComponent<SpriteRenderer> ().sprite;
-
+		spriteImage = dinosaur.GetComponent<SpriteRenderer> ().sprite;
+		SpriteRenderer sr = this.gameObject.GetComponent<SpriteRenderer>();
+		sr.sprite = spriteImage;
+		
 		speed = dinosaur.speed;
 		projectileRange = dinosaur.getRange();
 	}
@@ -94,10 +97,8 @@ public class Player : MonoBehaviour
 		if (enterPause) {
 			if (onPause) {
 				Instantiate (pauseOverlay);
-				Destroy (overlay.gameObject);
 			} else {
 				Instantiate (overlay);
-				Destroy (pauseOverlay.gameObject);
 			}
 			enterPause = false;
 		}
@@ -195,14 +196,20 @@ public class Player : MonoBehaviour
 		if (Input.GetKey ("a")) {
 			if (cheatcode == 9){
 				Debug.Log("Konami Code FTW");
-				cameraShake shaker = new cameraShake();
-				shaker.Shake();
+				SpriteRenderer sr = this.gameObject.GetComponent<SpriteRenderer>();
+				sr.sprite = fluff;
 				cheatcode = 0;
 			}
 		}
 
 		if (Input.GetKey ("escape")) {
 			Application.Quit();
+		}
+
+		if (Input.GetKey ("enter")) {
+			if(onPause){
+				Application.LoadLevel("main");
+			}
 		}
 	}
 

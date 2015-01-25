@@ -8,6 +8,6 @@ public class Diplodofortress : Dino {
 	protected override int baseSurvivability { get { return 7;  } }
 	protected override int baseExplosive     { get { return 7;  } }
 
-	protected override Color colour { get { return new Color (0f,0f,1f); } }
+	protected override Color colour { get { return new Color (0.12f,0.8f,0.9f); } }
 
 }
