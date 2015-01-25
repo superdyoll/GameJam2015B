@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
 
 	private GUIText gameOver;
 	private GUIText endScore;
+	private GUIText restartNote;
 
 	private Sprite spriteImage;
 
@@ -70,6 +71,8 @@ public class Player : MonoBehaviour
 		gameOver.enabled = false;
 		endScore = GameObject.Find ("EndScore").GetComponent<GUIText> ();
 		endScore.enabled = false;
+		restartNote = GameObject.Find ("RestartNote").GetComponent<GUIText> ();
+		restartNote.enabled = false;
 
 		Ascend ();
 		Level.LevelUp ();
@@ -284,6 +287,7 @@ public class Player : MonoBehaviour
 		Time.timeScale = 0;
 		gameOver.enabled = true;
 		endScore.enabled = true;
+		restartNote.enabled = true;
 		endScore.text = "SCORE: " + bloodScore;
 	}
 }

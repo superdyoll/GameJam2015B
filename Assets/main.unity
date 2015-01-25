@@ -171,7 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c425fcd89bff514fb8f8e5abb487e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalDinosaurs: 15
   assaultosaurusPrefab: {fileID: 100000, guid: 9217618225a20f44e8cf4928daff21a9, type: 2}
   diplodofortressPrefab: {fileID: 183150, guid: 95c22def335ce444180ac32541e7ec05,
     type: 2}
@@ -1122,6 +1121,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 356856506}
   m_RootOrder: 5
+--- !u!1 &2047095553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2047095555}
+  - 132: {fileID: 2047095554}
+  m_Layer: 0
+  m_Name: RestartNote
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!132 &2047095554
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2047095553}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Press enter to die again
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: e1589235ac7a44c4bb7bc69af4870f69, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 32
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278255548
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!4 &2047095555
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2047095553}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1 &2121361447
 GameObject:
   m_ObjectHideFlags: 0
