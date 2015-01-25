@@ -15,4 +15,6 @@ public class Shotgun : Weapon {
 		} }
 	protected int baseBounce { get {return 0;}}
 	protected override int baseProjectileCount { get { return Random.Range (2, 6); } }
+
+	protected override int baseRof { get { return 4; } }
 }

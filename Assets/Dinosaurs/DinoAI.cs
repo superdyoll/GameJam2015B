@@ -60,7 +60,7 @@ public class DinoAI : MonoBehaviour {
 				positionToTarget = new Vector3(Random.Range (positionToTarget.x - 5, positionToTarget.x + 5), Random.Range (positionToTarget.y - 5, positionToTarget.y + 5), 0f);
 				GameObject projInst = (GameObject)Instantiate (player.projectile, transform.position + positionToTarget.normalized, Quaternion.identity);
 				Projectile projScript = projInst.GetComponent<Projectile> ();
-				projScript.Go (dinoStats.getRange(), 10, 10, 4, dinoStats.weapon.damage / 3, positionToTarget.normalized, "Player", dinoStats);
+				projScript.Go (dinoStats.getRange(), 10, 10, dinoStats.weapon.rof, dinoStats.weapon.damage / 5, positionToTarget.normalized, "Player", dinoStats);
 				projInst.GetComponent<TrailRenderer>().material = player.sovietRed;
 			}
 		}

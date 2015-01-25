@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
 		dinosaur.playerControlled = true;
 		dinosaur.Create ();
 
-		bloodTarget = ((20 - dinosaur.survivability) * 100 * Level.getLevel()+1) * 666;
+		bloodTarget = ((20 - dinosaur.survivability) * 25 * Level.getLevel()+1) * 666;
 		startHealth = health = dinosaur.health * 20;
 		UpdateHealthbar ();
 
@@ -146,7 +146,7 @@ public class Player : MonoBehaviour
 			GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
 			Projectile projScript = projInst.GetComponent<Projectile> ();
 			Vector3 pos = new Vector3 (UnityEngine.Random.Range (GetVect3Rotation().x - 0.2f, GetVect3Rotation().x + 0.2f), UnityEngine.Random.Range (GetVect3Rotation().y -0.2f, GetVect3Rotation().y +0.2f), 0f);
-			projScript.Go (projectileRange, 10, 1, 4, dinosaur.weapon.damage, pos.normalized, "Enemy", dinosaur);
+			projScript.Go (projectileRange, 10, 1, dinosaur.weapon.rof, dinosaur.weapon.damage, pos.normalized, "Enemy", dinosaur);
 			projInst.GetComponent<TrailRenderer> ().material = isaBlue;
 		}
 	}

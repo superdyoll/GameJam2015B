@@ -15,4 +15,6 @@ public class Sniper : Weapon {
 		} }
 	protected int baseBounce { get {return 4;}}
 	protected override int baseProjectileCount { get { return 1; } }
+
+	protected override int baseRof { get { return 4;} }
 }
