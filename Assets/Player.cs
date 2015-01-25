@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
 		dinosaur.playerControlled = true;
 		dinosaur.Create ();
 
-		bloodTarget = (20 - dinosaur.survivability) * 100 * Level.getLevel()+1;
+		bloodTarget = ((20 - dinosaur.survivability) * 100 * Level.getLevel()+1) * 666;
 		startHealth = health = dinosaur.health * 20;
 		UpdateHealthbar ();
 

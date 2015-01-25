@@ -113,7 +113,7 @@ public abstract class Dino : MonoBehaviour {
 	public void Damage(int amount) {
 		health -= amount;
 
-		player.bloodScore += exp / 10;
+		player.bloodScore += (exp / 10) * 666;
 
 		if (health <= 0) {
 			this.die();
@@ -121,7 +121,7 @@ public abstract class Dino : MonoBehaviour {
 	}
 
 	public void die() {
-		player.bloodScore += exp;
+		player.bloodScore += exp * 666;
 		DinoGenerator dinoThing = GameObject.Find ("Main Camera").GetComponent<DinoGenerator> ();
 		dinoThing.RemoveDinosaur (this.gameObject);
 
