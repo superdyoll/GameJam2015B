@@ -42,11 +42,7 @@ public class Projectile : MonoBehaviour{
 		transform.position += direction * speed * 0.06f;
 
 		float distanceToPlayer = Vector3.Distance (transform.position, player.transform.position); 
-
-		if (distanceToPlayer > 70f) {
-			Destroy (gameObject);
-		}
-
+		
 		if(distanceToPlayer > range){
 			explosion.Play();
 
@@ -66,29 +62,24 @@ public class Projectile : MonoBehaviour{
 			for(int i = 0; i < dinoGenerator.dinosOnScreen.Count; ++i)
 			{
 				float tempDist = Vector3.Distance(dinoGenerator.dinosOnScreen[i].transform.position, transform.position);
-				if(tempDist < player.GetComponent<Player> ().dinosaur.explosive){//radius){
-					dinoGenerator.dinosOnScreen[i].gameObject.GetComponent<Dino>().Damage(player.GetComponent<Player> ().dinosaur.weapon.damage/2);
-					--i;
+				if(tempDist < 10){//radius){
+					dinoGenerator.dinosOnScreen[i].gameObject.GetComponent<Dino>().Damage(1);
 				}
-			}
 
-			for(int i = 0; i < dinoGenerator.dinosOnScreen.Count; ++i)
-			{
-				float tempDist = Vector3.Distance(dinoGenerator.dinosOnScreen[i].transform.position, transform.position);
-				if(tempDist < distanceToNearestEnemy){
+				if (tempDist < distanceToNearestEnemy) {
 					tempDist = distanceToNearestEnemy;
 					nearestEnemy = dinoGenerator.dinosOnScreen[i].gameObject;
 				}
 			}
-			
+
 			if (bounce > 0) {
 				--bounce;
 				GameObject projectile = (GameObject)Instantiate (player.GetComponent<Player>().projectile, transform.position, Quaternion.identity);
 				Vector3 target = nearestEnemy.transform.position - transform.position;
-				projectile.GetComponent<Projectile>().Go (range, radius, bounce, speed, damage, target, hostileTo);
+				projectile.GetComponent<Projectile> ().Go (range, radius, bounce, speed, damage, target, hostileTo);
 			}
 
-			Destroy (this.gameObject);
+			Destroy (gameObject);
 			Debug.Log("Destroyed bullet");
 		}
 	}
