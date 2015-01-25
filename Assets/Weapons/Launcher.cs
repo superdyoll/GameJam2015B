@@ -16,7 +16,7 @@ public class Launcher : Weapon {
 		} }
 	protected override int baseProjectileCount {get {return 1;}}
 
-	protected override int baseRof { get { return 2; } }
+	protected override int baseRof { get { return 6; } }
 
 	// Use this for initialization
 	void Start () {

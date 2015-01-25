@@ -13,7 +13,7 @@ public class HandCannon : Weapon {
 			} 
 			return Screen.height /50;
 		} }
-	protected override int baseProjectileCount {get {return 1;}}
+	protected override int baseProjectileCount {get {return 2;}}
 	
-	protected override int baseRof { get { return 10;} }
+	protected override int baseRof { get { return 12;} }
 }
