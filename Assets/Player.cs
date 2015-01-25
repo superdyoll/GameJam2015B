@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 	public GameObject projectile;
 	private float timer = 0f;
 
-	public int health = 100;
+	public int health;
 	public int startHealth;
 
 	public int numberOfUpgrades = 5;
@@ -23,6 +23,10 @@ public class Player : MonoBehaviour
 
 	private GUIText bloodText;
 	private GUITexture healthbar;
+
+	private GUIText gameOver;
+
+	private Sprite spriteImage;
 
 	private int cheatcode = 0;
 
@@ -38,14 +42,19 @@ public class Player : MonoBehaviour
 		dinosaur.Create ();
 
 		bloodTarget = (int)Math.Pow ((20 - dinosaur.survivability) * 1000, Level.getLevel()+1);
-		startHealth = health;
+		startHealth = health = dinosaur.health * 20;
 		UpdateHealthbar ();
+
+		spriteImage = GetComponent<SpriteRenderer> ().sprite;
 
 		speed = dinosaur.speed;
 		projectileRange = dinosaur.getRange();
 	}
 
 	void Start() {
+		gameOver = GameObject.Find ("GameOver").GetComponent<GUIText> ();
+		gameOver.enabled = false;
+
 		Ascend ();
 		Level.LevelUp ();
 		Vector2 S = gameObject.GetComponent<SpriteRenderer> ().sprite.bounds.size;
@@ -190,14 +199,23 @@ public class Player : MonoBehaviour
 	}
 
 	private void Kill(Dino origin){
-		healthbar.transform.position = new Vector2 (-0.99f, 0); //Meant to make it vanish - the bugger won't go away
+		if (bloodScore >= bloodTarget) {
+			healthbar.transform.position = new Vector2 (-0.99f, 0); //Meant to make it vanish - the bugger won't go away
 
-		DinoGenerator dinoThing = GameObject.Find ("Main Camera").GetComponent<DinoGenerator> ();
-		dinoThing.ClearDinos ();
+			DinoGenerator dinoThing = GameObject.Find ("Main Camera").GetComponent<DinoGenerator> ();
+			dinoThing.ClearDinos ();
+
+			Ascend (origin);
+		} else {
+			GameOver();
+		}
 
 		Debug.Log ("Dead");
 	}
 
 	private void GameOver() {
+		Time.timeScale = 0;
+
+		gameOver.enabled = true;
 	}
 }
