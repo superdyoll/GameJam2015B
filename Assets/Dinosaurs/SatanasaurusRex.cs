@@ -4,7 +4,7 @@ using System.Collections;
 public class SatanasaurusRex : Dino {
 	
 	protected override int baseHealth        { get { return 6; } }
-	protected override int baseSpeed         { get { return 4;  } }
+	protected override int baseSpeed         { get { return 3;  } }
 	protected override int baseSurvivability { get { return 2;  } }
 	protected override int baseExplosive     { get { return 10;  } }
 	
