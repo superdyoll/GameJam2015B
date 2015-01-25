@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
 			if(upgradeNumber <= numberOfUpgrades){
 				Ascend();
 			}else{
-				Kill();
+				GameOver();
 			}
 		}
 
@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
 	private void Fire(){
 		GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
 		Projectile projScript = projInst.GetComponent<Projectile> ();
-		projScript.Go (projectileRange, 10, 1, 10, dinosaur.weapon.damage, GetVect3Rotation (), "Enemy");
+		projScript.Go (projectileRange, 10, 1, 10, dinosaur.weapon.damage, GetVect3Rotation (), "Enemy", dinosaur);
 
 	}
 
@@ -179,18 +179,25 @@ public class Player : MonoBehaviour
 		healthbar.transform.position = new Vector2(move, healthbar.transform.position.y);
 	}
 
-	public void Damage(int amount) {
+	public void Damage(int amount, Dino origin) {
 		health -= amount;
 
 		if (health <= 0) {
-			Kill ();
+			Kill (origin);
 		} else {
 			UpdateHealthbar ();
 		}
 	}
 
-	private void Kill(){
+	private void Kill(Dino origin){
 		healthbar.transform.position = new Vector2 (-0.99f, 0); //Meant to make it vanish - the bugger won't go away
+
+		DinoGenerator dinoThing = GameObject.Find ("Main Camera").GetComponent<DinoGenerator> ();
+		dinoThing.ClearDinos ();
+
 		Debug.Log ("Dead");
+	}
+
+	private void GameOver() {
 	}
 }
