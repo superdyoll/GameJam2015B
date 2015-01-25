@@ -171,7 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c425fcd89bff514fb8f8e5abb487e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalDinosaurs: 15
   assaultosaurusPrefab: {fileID: 100000, guid: 9217618225a20f44e8cf4928daff21a9, type: 2}
   diplodofortressPrefab: {fileID: 183150, guid: 95c22def335ce444180ac32541e7ec05,
     type: 2}
@@ -991,6 +990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f298047c8e297c4f89ff0c687509eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crosshairImage: {fileID: 2800000, guid: 3d8fd50577a09ba4da574fd2751607b4, type: 3}
   speed: 1
   projectileRange: 100
   projectile: {fileID: 100000, guid: 2cc9d66016a3f474c9c909db318c6bf0, type: 2}
