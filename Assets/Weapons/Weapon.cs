@@ -23,9 +23,9 @@ public abstract class Weapon : MonoBehaviour {
 	public void Create() {
 		playerControlled = false;
 
-		range =  (int)Math.Pow (baseRange  + pointsIn, Level.getLevel());
-		radius = (int)Math.Pow (baseRadius + pointsIn, Level.getLevel());
-		damage = (int)Math.Pow (baseDamage + pointsIn, Level.getLevel());
+		range =  baseRange  + pointsIn;
+		radius = baseRadius + pointsIn;
+		damage = baseDamage + pointsIn;
 
 		Debug.Log ("Hurr: " + range);
 	}
