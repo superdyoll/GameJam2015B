@@ -1,6 +1,15 @@
 fileFormatVersion: 2
 guid: 50e3a86f59a9dea4993dbe6f76171833
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Dinotopia_Tyrannosaur_0
+    21300002: Dinotopia_Tyrannosaur_1
+    21300004: Dinotopia_Tyrannosaur_2
+    21300006: Dinotopia_Tyrannosaur_3
+    21300008: Dinotopia_Tyrannosaur_4
+    21300010: Dinotopia_Tyrannosaur_5
+    21300012: Dinotopia_Tyrannosaur_6
+    21300014: Dinotopia_Tyrannosaur_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -36,7 +45,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
