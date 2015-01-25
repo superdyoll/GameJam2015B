@@ -4,6 +4,8 @@ using System.Collections;
 
 public class Player : MonoBehaviour 
 {
+	public Texture2D crosshairImage;
+
 	public float speed = 1;
 	public int projectileRange = 100;
 	public GameObject projectile;
@@ -64,6 +66,8 @@ public class Player : MonoBehaviour
 	}
 
 	void Start() {
+		Screen.showCursor = false;
+
 		overlay.SetActive (true);
 		pauseOverlay.SetActive (true);
 
@@ -110,6 +114,14 @@ public class Player : MonoBehaviour
 			}
 			enterPause = false;
 		}
+	}
+
+	void OnGUI()
+	{
+		//Draw on current mouse position
+		float xMin = Screen.width - (Screen.width - Input.mousePosition.x) - (crosshairImage.width / 2);
+		float yMin = (Screen.height - Input.mousePosition.y) - (crosshairImage.height / 2);
+		GUI.DrawTexture(new Rect(xMin, yMin, crosshairImage.width, crosshairImage.height), crosshairImage);
 	}
 
 	public Vector2 GetPosition()
