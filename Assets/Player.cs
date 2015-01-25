@@ -35,6 +35,10 @@ public class Player : MonoBehaviour
 	public GameObject overlay, pauseOverlay;
 	private Boolean onPause = false, enterPause = true;
 
+Texture2D cursorTexture;
+	CursorMode cursorMode  = CursorMode.Auto;
+	Vector2 hotSpot = Vector2.zero;
+
 	void Ascend () {
 		DinoSelector chooseDino = new DinoSelector ();
 		dinosaur = chooseDino.ChooseRandomDino (gameObject);
@@ -60,6 +64,8 @@ public class Player : MonoBehaviour
 	}
 
 	void Start() {
+
+		
 		overlay.SetActive (true);
 		pauseOverlay.SetActive (true);
 
@@ -131,7 +137,7 @@ public class Player : MonoBehaviour
 			timer = Time.time;
 			Fire();
 		}
-		if(timer + 0.005f < Time.time)
+		if(timer + 0.2f < Time.time)
 		{
 			timer = 0f;
 		}
@@ -252,11 +258,12 @@ public class Player : MonoBehaviour
 	}
 
 	private void Kill(Dino origin){
+		Debug.Log ("orgin: " + origin.gameObject.name);
 		if (bloodScore >= bloodTarget) {
 			healthbar.transform.position = new Vector2 (-0.99f, 0); //Meant to make it vanish - the bugger won't go away
 
-			DinoGenerator dinoThing = GameObject.Find ("Main Camera").GetComponent<DinoGenerator> ();
-			dinoThing.ClearDinos ();
+			//DinoGenerator dinoThing = GameObject.Find ("Main Camera").GetComponent<DinoGenerator> ();
+			//dinoThing.ClearDinos ();
 
 			Ascend (origin);
 		} else {
