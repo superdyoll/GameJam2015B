@@ -195,6 +195,8 @@ public class Player : MonoBehaviour
 		if (Input.GetKey ("a")) {
 			if (cheatcode == 9){
 				Debug.Log("Konami Code FTW");
+				cameraShake shaker = new cameraShake();
+				shaker.Shake();
 				cheatcode = 0;
 			}
 		}
