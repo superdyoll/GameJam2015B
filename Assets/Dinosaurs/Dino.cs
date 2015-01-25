@@ -9,7 +9,7 @@ public abstract class Dino : MonoBehaviour {
 	abstract protected int baseSurvivability { get; }
 	abstract protected int baseExplosive     { get; }
 
-	protected int baseExp { get { return 100; } }
+	protected int baseExp { get { return 17; } }
 
 	abstract protected Color colour { get; }
 	public Weapon weapon { get; set; }
@@ -32,7 +32,7 @@ public abstract class Dino : MonoBehaviour {
 		GrabWeapon ();
 
 		if (playerControlled) {
-			health = baseHealth;
+			health = (int) (baseHealth * level + 1);
 			speed  = baseSpeed;
 			survivability = baseSurvivability;
 			explosive = baseExplosive;
@@ -57,8 +57,8 @@ public abstract class Dino : MonoBehaviour {
 	}
 
 	private void GrabWeapon(){
-		int weaponInt = UnityEngine.Random.Range(0, 3);// for now, there's only one //rnd.Next (5);
-		
+		int weaponInt = UnityEngine.Random.Range(0, 4);// for now, there's only one //rnd.Next (5);
+
 		switch (weaponInt) {
 		case 0:
 			weapon = gameObject.AddComponent<Launcher> ();
@@ -68,6 +68,9 @@ public abstract class Dino : MonoBehaviour {
 			break;
 		case 2:
 			weapon = gameObject.AddComponent<Shotgun>();
+			break;
+		case 3:
+			weapon = gameObject.AddComponent<HandCannon>();
 			break;
 		default:
 			weapon = gameObject.AddComponent<Launcher> ();
@@ -95,7 +98,7 @@ public abstract class Dino : MonoBehaviour {
 			//Debug.Log("EXP Worth:" + exp);
 		}
 
-		health = (int) (baseHealth * level);
+		health = (int) (baseHealth * level * level);
 		speed = (int) (baseSpeed * level);
 		survivability = (int) (baseSurvivability * level);
 		explosive = (int) (baseExplosive * level);
