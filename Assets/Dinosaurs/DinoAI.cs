@@ -8,6 +8,7 @@ public class DinoAI : MonoBehaviour {
 	private bool ready = false;
 	private Vector3 movingDirection;
 	private float timer = 0f;
+	public float delay = 0.25f;
 
 	public void InsertBrain (Dino dinoStats) {
 		this.dinoStats = dinoStats;
@@ -56,7 +57,7 @@ public class DinoAI : MonoBehaviour {
 			Projectile projScript = projInst.GetComponent<Projectile> ();
 			projScript.Go (dinoStats.getRange(), 10, 1, 10, dinoStats.weapon.damage, positionToTarget.normalized, "Player");
 		}
-		if(timer + 0.25f < Time.time)
+		if(timer + delay < Time.time)
 		{
 			timer = 0f;
 		}
