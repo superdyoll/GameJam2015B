@@ -245,7 +245,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1 &283086345
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +478,7 @@ Transform:
   m_LocalScale: {x: 2, y: .200000003, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &658995336
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,46 +779,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1125041179}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1231051169
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1231051171}
-  - 114: {fileID: 1231051170}
-  m_Layer: 0
-  m_Name: Overlay
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1231051170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1231051169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65961dee0edc77c4cad5473cb4973c99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 2800000, guid: 44b16bfe5876f574fbb82c64f21b7dfc, type: 3}
---- !u!4 &1231051171
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1231051169}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.0124311, y: 11.2697487, z: .0999946594}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
 --- !u!1 &1269087361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,6 +999,8 @@ MonoBehaviour:
   fluff: {fileID: 0}
   bloodScore: 0
   bloodTarget: 0
+  overlay: {fileID: 100000, guid: 8a4cfb7fdc75eed4ba85c271dc3314c0, type: 2}
+  pauseOverlay: {fileID: 100000, guid: e4049a83eae9bde43925a197cd866947, type: 2}
 --- !u!95 &1788235298
 Animator:
   serializedVersion: 3

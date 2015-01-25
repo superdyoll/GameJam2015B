@@ -31,6 +31,9 @@ public class Player : MonoBehaviour
 
 	private int cheatcode = 0;
 
+	public GameObject overlay, pauseOverlay;
+	private Boolean onPause = false, enterPause = true;
+
 	void Ascend () {
 		DinoSelector chooseDino = new DinoSelector ();
 		dinosaur = chooseDino.ChooseRandomDino (gameObject);
@@ -53,6 +56,9 @@ public class Player : MonoBehaviour
 	}
 
 	void Start() {
+		overlay.SetActive (true);
+		pauseOverlay.SetActive (true);
+
 		gameOver = GameObject.Find ("GameOver").GetComponent<GUIText> ();
 		gameOver.enabled = false;
 		endScore = GameObject.Find ("EndScore").GetComponent<GUIText> ();
@@ -83,6 +89,17 @@ public class Player : MonoBehaviour
 			}else{
 				GameOver();
 			}
+		}
+
+		if (enterPause) {
+			if (onPause) {
+				Instantiate (pauseOverlay);
+				Destroy (overlay.gameObject);
+			} else {
+				Instantiate (overlay);
+				DestroyImmediate (pauseOverlay.gameObject);
+			}
+			enterPause = false;
 		}
 
 	}
@@ -181,6 +198,10 @@ public class Player : MonoBehaviour
 				cheatcode = 0;
 			}
 		}
+
+		if (Input.GetKey ("escape")) {
+			Application.Quit();
+		}
 	}
 
 	private void UpdateHealthbar() {
@@ -218,8 +239,10 @@ public class Player : MonoBehaviour
 	}
 
 	private void GameOver() {
-		Time.timeScale = 0;
+		onPause = true;
+		enterPause = true;
 
+		Time.timeScale = 0;
 		gameOver.enabled = true;
 		endScore.enabled = true;
 		endScore.text = "SCORE: " + bloodScore;
