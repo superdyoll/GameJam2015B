@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
 	void Ascend () {
 		DinoSelector chooseDino = new DinoSelector ();
 		dinosaur = chooseDino.ChooseRandomDino (gameObject);
-
+		Debug.Log ("Dino to be passed:" + dinosaur.gameObject.name);
 		Ascend (dinosaur);
 	}
 
@@ -97,10 +97,8 @@ public class Player : MonoBehaviour
 		if (enterPause) {
 			if (onPause) {
 				Instantiate (pauseOverlay);
-				Destroy (overlay.gameObject);
 			} else {
 				Instantiate (overlay);
-				Destroy (pauseOverlay.gameObject);
 			}
 			enterPause = false;
 		}
