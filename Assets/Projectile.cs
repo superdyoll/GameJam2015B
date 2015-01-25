@@ -56,9 +56,8 @@ public class Projectile : MonoBehaviour{
 			//explosion.Play();
 
 			//if(!explosion.isPlaying){
-			Debug.Log ("Destroyed bullet after range");
+
 			RemoveProjectile();
-			//}
 		}
 	}
 

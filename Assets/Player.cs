@@ -57,9 +57,10 @@ public class Player : MonoBehaviour
 
 		Ascend ();
 		Level.LevelUp ();
-		Vector2 S = gameObject.GetComponent<SpriteRenderer> ().sprite.bounds.size;
+
+		/*Vector2 S = gameObject.GetComponent<SpriteRenderer> ().sprite.bounds.size;
 		gameObject.GetComponent<BoxCollider2D> ().size = S;
-		gameObject.GetComponent<BoxCollider2D> ().center = new Vector2 ((S.x / 2), 0);
+		gameObject.GetComponent<BoxCollider2D> ().center = new Vector2 ((S.x / 2), 0);*/
 	}
 
 	void Update () {
