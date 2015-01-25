@@ -28,9 +28,13 @@ public class DinoSelector {
 			currentDinosaur.AddComponent<SatanasaurusRex>();
 			dinosaur = currentDinosaur.GetComponent<SatanasaurusRex>();
 			break;
-		default:
+		case 5:
 			currentDinosaur.AddComponent<Terrordactyl>();
 			dinosaur = currentDinosaur.GetComponent<Terrordactyl>();
+			break;
+		default:
+			currentDinosaur.AddComponent<Diplodofortress>();
+			dinosaur = currentDinosaur.GetComponent<Diplodofortress>();
 			break;
 		}
 

@@ -42,6 +42,11 @@ public class Projectile : MonoBehaviour{
 
 	void Update(){
 		transform.position += direction * speed * 0.06f;
+		if (hostileTo == "Player") {
+			renderer.material.color = new Color (1f, 0f, 0f);
+		} else {
+			renderer.material.color = new Color (0f, 1f, 1f);
+		}
 
 		float distanceToPlayer = Vector3.Distance (transform.position, player.transform.position); 
 

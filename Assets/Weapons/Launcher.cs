@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class Launcher : Weapon {
 
-	protected override int baseDamage { get { return 10; } }
+	protected override int baseDamage { get { return (int) Math.Pow(10, Level.getLevel()); } }
 	protected override int baseRadius { get { return Screen.height / 10; } }
 	protected override int baseRange  { get { 
 			if (playerControlled) {

@@ -45,8 +45,11 @@ public class DinoGenerator : MonoBehaviour {
 			case 4:
 				newDino = (GameObject)Instantiate(satanasaurusRexPrefab, newDinoVector, Quaternion.identity);
 				break;
-			default:
+			case 5:
 				newDino = (GameObject)Instantiate(terrordactylPrefab, newDinoVector, Quaternion.identity);
+				break;
+			default:
+				newDino = (GameObject)Instantiate(diplodofortressPrefab, newDinoVector, Quaternion.identity);
 				break;
 			}
 			chooseDino.ChooseRandomDino(newDino, num);

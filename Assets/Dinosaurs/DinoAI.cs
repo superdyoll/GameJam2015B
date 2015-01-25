@@ -55,7 +55,7 @@ public class DinoAI : MonoBehaviour {
 			Vector3 positionToTarget = (Vector3)player.GetPosition() - transform.position;
 			GameObject projInst = (GameObject)Instantiate (player.projectile, transform.position + positionToTarget.normalized, Quaternion.identity);
 			Projectile projScript = projInst.GetComponent<Projectile> ();
-			projScript.Go (dinoStats.getRange(), 10, 1, 10, dinoStats.weapon.damage, positionToTarget.normalized, "Player", dinoStats);
+			projScript.Go (dinoStats.getRange(), 10, 1, 6, dinoStats.weapon.damage, positionToTarget.normalized, "Player", dinoStats);
 		}
 		if(timer + delay < Time.time)
 		{
