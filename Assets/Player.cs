@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 	private GUITexture healthbar;
 
 	private GUIText gameOver;
+	private GUIText endScore;
 
 	private Sprite spriteImage;
 
@@ -44,7 +45,7 @@ public class Player : MonoBehaviour
 		dinosaur.playerControlled = true;
 		dinosaur.Create ();
 
-		bloodTarget = (int)Math.Pow ((20 - dinosaur.survivability) * 1000, Level.getLevel()+1);
+		bloodTarget = ((20 - dinosaur.survivability) * 100 * Level.getLevel()+1) * 666;
 		startHealth = health = dinosaur.health * 20;
 		UpdateHealthbar ();
 
@@ -60,6 +61,8 @@ public class Player : MonoBehaviour
 
 		gameOver = GameObject.Find ("GameOver").GetComponent<GUIText> ();
 		gameOver.enabled = false;
+		endScore = GameObject.Find ("EndScore").GetComponent<GUIText> ();
+		endScore.enabled = false;
 
 		Ascend ();
 		Level.LevelUp ();
@@ -241,5 +244,7 @@ public class Player : MonoBehaviour
 
 		Time.timeScale = 0;
 		gameOver.enabled = true;
+		endScore.enabled = true;
+		endScore.text = "SCORE: " + bloodScore;
 	}
 }

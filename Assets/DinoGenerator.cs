@@ -37,7 +37,7 @@ public class DinoGenerator : MonoBehaviour {
 				newDino = (GameObject)Instantiate(triceratankPrefab, newDinoVector, Quaternion.identity);
 				break;
 			case 2:
-				newDino = (GameObject)Instantiate(assaultosaurusPrefab, newDinoVector, Quaternion.identity);
+				newDino = (GameObject)Instantiate(terrordactylPrefab, newDinoVector, Quaternion.identity);
 				break;
 			case 3:
 				newDino = (GameObject)Instantiate(horroraptorPrefab, newDinoVector, Quaternion.identity);
@@ -46,7 +46,7 @@ public class DinoGenerator : MonoBehaviour {
 				newDino = (GameObject)Instantiate(satanasaurusRexPrefab, newDinoVector, Quaternion.identity);
 				break;
 			case 5:
-				newDino = (GameObject)Instantiate(terrordactylPrefab, newDinoVector, Quaternion.identity);
+				newDino = (GameObject)Instantiate(assaultosaurusPrefab, newDinoVector, Quaternion.identity);
 				break;
 			default:
 				newDino = (GameObject)Instantiate(diplodofortressPrefab, newDinoVector, Quaternion.identity);
@@ -59,11 +59,13 @@ public class DinoGenerator : MonoBehaviour {
 	}
 
 	public void RemoveDinosaur (GameObject dinoRemove){
+		Debug.Log ("eeeeeeerghghghgh");
 		dinosOnScreen.Remove (dinoRemove);
 	}
 
 	public void ClearDinos () {
 		foreach (GameObject dino in dinosOnScreen) {
+			Destroy(dino);
 			RemoveDinosaur (dino);
 		}
 	}
