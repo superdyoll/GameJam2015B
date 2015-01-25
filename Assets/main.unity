@@ -944,6 +944,7 @@ MonoBehaviour:
   health: 100
   startHealth: 0
   numberOfUpgrades: 5
+  fluff: {fileID: 0}
   bloodScore: 0
   bloodTarget: 0
 --- !u!95 &1788235298

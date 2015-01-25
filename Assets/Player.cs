@@ -16,12 +16,15 @@ public class Player : MonoBehaviour
 	protected int upgradeNumber = 0;
 
 	public Dino dinosaur { get; set; }
+	public Sprite fluff;
 
 	public float bloodScore = 0;
 	public float bloodTarget;
 
 	private GUIText bloodText;
 	private GUITexture healthbar;
+
+	private int cheatcode = 0;
 
 	void Ascend () {
 		DinoSelector chooseDino = new DinoSelector ();
@@ -106,36 +109,60 @@ public class Player : MonoBehaviour
 	}
 
 	private void GetMovementInput(){
-		if (Input.GetKey ("w")) {
+		if (Input.GetKey ("w") || Input.GetKey ("up")) {
 			if(gameObject.transform.position.y < 50f){
 				gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 0.1f * speed);
 			}
 			else{
 				gameObject.transform.position = new Vector2(gameObject.transform.position.x, 50f);
 			}
+			if(cheatcode == 1 || cheatcode == 0){
+				cheatcode ++;
+			}
 		}
-		if (Input.GetKey ("a")) {
+		if (Input.GetKey ("a") || Input.GetKey ("left")) {
 			if(gameObject.transform.position.x > 0f){
 				gameObject.transform.position = new Vector2(gameObject.transform.position.x - 0.1f * speed, gameObject.transform.position.y);
 			}
 			else{
 				gameObject.transform.position = new Vector2(0f, gameObject.transform.position.y);
 			}
+			if (cheatcode == 4 || cheatcode == 6){
+				cheatcode ++;
+			}
 		}
-		if (Input.GetKey ("s")) {
+		if (Input.GetKey ("s") || Input.GetKey ("down")) {
 			if(gameObject.transform.position.y > 0f){
 				gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.1f * speed);
 			}
 			else{
 				gameObject.transform.position = new Vector2(gameObject.transform.position.x, 0f);
 			}
+			if (cheatcode == 2 || cheatcode == 3){
+				cheatcode ++;
+			}
 		}
-		if (Input.GetKey ("d")) {
+		if (Input.GetKey ("d") || Input.GetKey ("right")) {
 			if(gameObject.transform.position.x < 50f){
 				gameObject.transform.position = new Vector2(gameObject.transform.position.x + 0.1f * speed, gameObject.transform.position.y);
 			}
 			else{
 				gameObject.transform.position = new Vector2(50f, gameObject.transform.position.y);
+			}
+			if (cheatcode == 5 || cheatcode == 7){
+				cheatcode ++;
+			}
+		}
+		if (Input.GetKey ("b")) {
+			if (cheatcode == 8){
+				cheatcode ++;
+			}
+		}
+
+		if (Input.GetKey ("a")) {
+			if (cheatcode == 9){
+				Debug.Log("Konami Code FTW");
+				cheatcode = 0;
 			}
 		}
 	}

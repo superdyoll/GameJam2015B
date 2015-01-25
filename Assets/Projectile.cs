@@ -47,7 +47,7 @@ public class Projectile : MonoBehaviour{
 			//explosion.Play();
 
 			//if(!explosion.isPlaying){
-				Debug.Log ("Destroyed bullet after range");
+				//Debug.Log ("Destroyed bullet after range");
 				Destroy(this.gameObject);
 			//}
 		}
@@ -79,8 +79,8 @@ public class Projectile : MonoBehaviour{
 				projectile.GetComponent<Projectile> ().Go (range, radius, bounce, speed, damage, target, hostileTo);
 			}
 
-			Destroy (gameObject);
-			Debug.Log("Destroyed bullet");
+			Destroy (this.gameObject);
+			//Debug.Log("Destroyed bullet");
 		}
 		else { //Must be YOU!!!
 			player.GetComponent<Player>().Damage(damage);
