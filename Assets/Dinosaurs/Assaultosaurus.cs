@@ -8,6 +8,6 @@ public class Assaultosaurus : Dino {
 	protected override int baseSurvivability { get { return 4;  } }
 	protected override int baseExplosive     { get { return 8;  } }
 
-	protected override Color colour { get { return new Color (1, 1, 0.5f); } }
+	protected override Color colour { get { return new Color (0f, 1f, 1f); } }
 
 }
