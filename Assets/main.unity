@@ -172,12 +172,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalDinosaurs: 10
-  assaultosaurusPrefab: {fileID: 0}
-  diplodofortressPrefab: {fileID: 0}
-  horroraptorPrefab: {fileID: 0}
-  satanasaurusRexPrefab: {fileID: 0}
-  terrordactylPrefab: {fileID: 0}
-  triceratankPrefab: {fileID: 0}
+  assaultosaurusPrefab: {fileID: 100000, guid: 9217618225a20f44e8cf4928daff21a9, type: 2}
+  diplodofortressPrefab: {fileID: 183150, guid: 95c22def335ce444180ac32541e7ec05,
+    type: 2}
+  horroraptorPrefab: {fileID: 100000, guid: bef1bbdcf0db433498dec289c2dd53d5, type: 2}
+  satanasaurusRexPrefab: {fileID: 100000, guid: d28082fc05596914eb4b763873243155,
+    type: 2}
+  terrordactylPrefab: {fileID: 100000, guid: b7dbd2b7a13d5ff4689b999318126a3a, type: 2}
+  triceratankPrefab: {fileID: 100000, guid: 7b73af4ade3bff74c8fa5438c4c9d056, type: 2}
   dinosOnScreen: []
   explosion: {fileID: 100000, guid: cc4787e700b788e4592d78e4099cec01, type: 2}
 --- !u!114 &30083230
