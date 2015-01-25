@@ -131,7 +131,7 @@ public class Player : MonoBehaviour
 			timer = Time.time;
 			Fire();
 		}
-		if(timer + 0.25f < Time.time)
+		if(timer + 0.005f < Time.time)
 		{
 			timer = 0f;
 		}
@@ -140,7 +140,8 @@ public class Player : MonoBehaviour
 	private void Fire(){
 		GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
 		Projectile projScript = projInst.GetComponent<Projectile> ();
-		projScript.Go (projectileRange, 10, 1, 6, dinosaur.weapon.damage, GetVect3Rotation (), "Enemy", dinosaur);
+		Vector3 pos = new Vector3 (UnityEngine.Random.Range (GetVect3Rotation().x - 0.2f, GetVect3Rotation().x + 0.2f), UnityEngine.Random.Range (GetVect3Rotation().y -0.2f, GetVect3Rotation().y +0.2f), 0f);
+		projScript.Go (projectileRange, 10, 1, 6, dinosaur.weapon.damage, pos.normalized, "Enemy", dinosaur);
 		projInst.GetComponent<TrailRenderer> ().material = isaBlue;
 	}
 

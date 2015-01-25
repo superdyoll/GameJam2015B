@@ -21,7 +21,6 @@ public class Projectile : MonoBehaviour{
 		this.direction = direction;
 		this.hostileTo = hostileTo;
 		this.origin = origin;
-		//explosion = transform.FindChild("ExplosionAnim").GetComponent<Animation> ();
 		player = GameObject.Find ("Player");
 
 		Vector3 anchor = transform.position + (Vector3)direction;
@@ -99,7 +98,8 @@ public class Projectile : MonoBehaviour{
 	}
 
 	private void RemoveProjectile() {
-		Instantiate (explosionPrefab, new Vector3 (transform.position.x, transform.position.y), Quaternion.identity);
+		GameObject explosion = (GameObject)Instantiate (explosionPrefab, new Vector3 (transform.position.x, transform.position.y), Quaternion.identity);
+		explosion.transform.localScale = new Vector3 (radius, radius, 1f);
 
 		Destroy (this.gameObject);
 	}
