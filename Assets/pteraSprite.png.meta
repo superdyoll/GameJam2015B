@@ -36,11 +36,71 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: pteraSprite_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 14
+        width: 134
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pteraSprite_1
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 24
+        width: 112
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pteraSprite_2
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 25
+        width: 165
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pteraSprite_3
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 22
+        width: 157
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pteraSprite_4
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 22
+        width: 139
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pteraSprite_5
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 26
+        width: 165
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 6
   userData: 
