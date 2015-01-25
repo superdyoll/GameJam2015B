@@ -79,11 +79,10 @@ public class Projectile : MonoBehaviour{
 				projectile.GetComponent<Projectile> ().Go (range, radius, bounce, speed, damage, target, hostileTo);
 			}
 
-			Destroy (this.gameObject);
+			if (enemy.transform.tag == "enemy") {
+				Destroy (this.gameObject);
+			}
 			//Debug.Log("Destroyed bullet");
-		}
-		else { //Must be YOU!!!
-			player.GetComponent<Player>().Damage(damage);
 		}
 	}
 }

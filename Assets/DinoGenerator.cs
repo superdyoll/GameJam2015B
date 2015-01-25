@@ -27,7 +27,7 @@ public class DinoGenerator : MonoBehaviour {
 			int x = Random.Range(0, 50);
 			int y = Random.Range(0, 50);
 			Vector3 newDinoVector = new Vector3(x,y);
-			int num = Random.Range(0, 4);
+			int num = Random.Range(0, 5);
 			GameObject newDino;
 			switch (num) {
 			case 0:
