@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 	public float speed = 1;
 	public int projectileRange = 100;
 	public GameObject projectile;
+	public Material sovietRed, isaBlue;
 	private float timer = 0f;
 
 	public int health;
@@ -79,6 +80,7 @@ public class Player : MonoBehaviour
 		GetMovementInput ();
 		GetMouseInput ();
 		UpdateCameraPosition ();
+		CheckInBounds ();
 
 		bloodText = GameObject.Find("BloodScore").GetComponent<GUIText> ();
 
@@ -139,9 +141,24 @@ public class Player : MonoBehaviour
 		GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
 		Projectile projScript = projInst.GetComponent<Projectile> ();
 		projScript.Go (projectileRange, 10, 1, 6, dinosaur.weapon.damage, GetVect3Rotation (), "Enemy", dinosaur);
-
+		projInst.GetComponent<TrailRenderer> ().material = isaBlue;
 	}
 
+	private void CheckInBounds(){
+		if(transform.position.y > 50f){
+			transform.position = new Vector3(transform.position.x, 50f, 0f);
+		}
+		if(transform.position.y < 0f){
+			transform.position = new Vector3(transform.position.x, 0f, 0f);			
+		}
+		if(transform.position.x > 50f){
+			transform.position = new Vector3(50f, transform.position.y, 0f);			
+		}
+		if(transform.position.x < 0f){
+			transform.position = new Vector3(0f, transform.position.y, 0f);			
+		}
+	}
+	
 	private void GetMovementInput(){
 		if (Input.GetKey ("w") || Input.GetKey ("up")) {
 			if(gameObject.transform.position.y < 50f){

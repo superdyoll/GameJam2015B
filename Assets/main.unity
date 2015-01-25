@@ -994,6 +994,8 @@ MonoBehaviour:
   speed: 1
   projectileRange: 100
   projectile: {fileID: 100000, guid: 2cc9d66016a3f474c9c909db318c6bf0, type: 2}
+  sovietRed: {fileID: 2100000, guid: 58b0516529b64b04d9d9e4c0d533cf04, type: 2}
+  isaBlue: {fileID: 2100000, guid: ef4fa40d4928a0a4a881d0bea17bdbee, type: 2}
   health: 100
   startHealth: 0
   numberOfUpgrades: 5

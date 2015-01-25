@@ -54,8 +54,8 @@ public class DinoGenerator : MonoBehaviour {
 				break;
 			}
 			Bounds bounds = newDino.GetComponent<SpriteRenderer>().sprite.bounds;
-			float xSize = 10f / bounds.size.x;
-			float ySize = 8f / bounds.size.y;
+			float xSize = 15f / bounds.size.x;
+			float ySize = 10f / bounds.size.y;
 			
 			float scaleFl = Random.Range (80, 120) / 300f;
 			Vector3 scale = new Vector3(scaleFl * xSize, scaleFl * ySize, 1);
