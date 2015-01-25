@@ -44,7 +44,7 @@ public class DinoAI : MonoBehaviour {
 			}
 
 			if(distanceToPlayer < dinoStats.weapon.range){
-				//FireWeapon();
+				FireWeapon();
 			}
 		}
 	}
