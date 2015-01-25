@@ -2,12 +2,12 @@
 using System.Collections;
 
 public class Projectile : MonoBehaviour{
+
 	public GameObject explosionPrefab;
 
 	private int range, radius, bounce, speed, damage;
 	private Vector3 direction;
 	private GameObject player;
-	public Animation explosion;
 	private string hostileTo;
 	private Dino origin;
 	private DinoGenerator dinoGenerator; 
@@ -21,7 +21,7 @@ public class Projectile : MonoBehaviour{
 		this.direction = direction;
 		this.hostileTo = hostileTo;
 		this.origin = origin;
-		explosion = transform.FindChild("ExplosionAnim").GetComponent<Animation> ();
+		//explosion = transform.FindChild("ExplosionAnim").GetComponent<Animation> ();
 		player = GameObject.Find ("Player");
 
 		Vector3 anchor = transform.position + (Vector3)direction;
