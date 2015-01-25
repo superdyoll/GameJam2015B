@@ -223,9 +223,10 @@ public class Player : MonoBehaviour
 			Application.Quit();
 		}
 
-		if (Input.GetKey ("enter")) {
-			if(onPause){
-				Application.LoadLevel("main");
+		if (Input.GetKey(KeyCode.KeypadEnter) || Input.GetKey ("enter") || Input.GetKey ("return")){ 
+			if (onPause){
+				Time.timeScale = 1;
+				Application.LoadLevel (Application.loadedLevelName);
 			}
 		}
 	}
