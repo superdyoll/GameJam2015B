@@ -59,11 +59,13 @@ public class DinoGenerator : MonoBehaviour {
 	}
 
 	public void RemoveDinosaur (GameObject dinoRemove){
+		Debug.Log ("eeeeeeerghghghgh");
 		dinosOnScreen.Remove (dinoRemove);
 	}
 
 	public void ClearDinos () {
 		foreach (GameObject dino in dinosOnScreen) {
+			Destroy(dino);
 			RemoveDinosaur (dino);
 		}
 	}

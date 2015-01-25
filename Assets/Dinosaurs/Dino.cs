@@ -75,12 +75,12 @@ public abstract class Dino : MonoBehaviour {
 		int boss = rnd.Next (20);
 		
 		if (boss == 13) {
-			level = gameLevel + 1.5;
+			level = gameLevel + 3;
 			transform.localScale = transform.localScale * 2;
-			exp = (int)Math.Pow (baseExp, gameLevel + 0.5);
+			exp = (int) (baseExp * gameLevel);
 		} else {
 			level = gameLevel + rndLevel;
-			exp = (int)Math.Pow (baseExp, level);
+			exp = (int) (baseExp *  level + 1);
 			//Debug.Log("EXP Worth:" + exp);
 		}
 
@@ -99,10 +99,10 @@ public abstract class Dino : MonoBehaviour {
 		}
 		weapon.Create ();
 
-		health = (int)Math.Pow (baseHealth, level);
-		speed = (int)Math.Pow (baseSpeed, level);
-		survivability = (int)Math.Pow (baseSurvivability, level);
-		explosive = (int)Math.Pow (baseExplosive, level);
+		health = (int) (baseHealth * level);
+		speed = (int) (baseSpeed * level);
+		survivability = (int) (baseSurvivability * level);
+		explosive = (int) (baseExplosive * level);
 
 		gameObject.GetComponent<DinoAI> ().InsertBrain (this);
 

@@ -88,6 +88,7 @@ public class Projectile : MonoBehaviour{
 					projectile.GetComponent<Projectile> ().Go (range, radius, bounce, speed, damage, target, hostileTo, origin);
 				}
 			} else {
+				//Debug.Log("awooble");
 				player.GetComponent<Player>().Damage(damage, origin);
 			}
 
