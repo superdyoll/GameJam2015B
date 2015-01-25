@@ -57,7 +57,7 @@ public class DinoGenerator : MonoBehaviour {
 			float xSize = 15f / bounds.size.x;
 			float ySize = 10f / bounds.size.y;
 			
-			float scaleFl = Random.Range (80, 120) / 300f;
+			float scaleFl = Random.Range (80, 120) / 600f;
 			Vector3 scale = new Vector3(scaleFl * xSize, scaleFl * ySize, 1);
 
 			newDino.transform.localScale = scale;

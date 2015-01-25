@@ -10,8 +10,7 @@ public class Player : MonoBehaviour
 	public Material sovietRed, isaBlue;
 	private float timer = 0f;
 
-	public int health;
-	public int startHealth;
+	public int health, startHealth, projectileCount = 4;
 
 	public int numberOfUpgrades = 5;
 	protected int upgradeNumber = 0;
@@ -104,7 +103,6 @@ public class Player : MonoBehaviour
 			}
 			enterPause = false;
 		}
-
 	}
 
 	public Vector2 GetPosition()
@@ -113,7 +111,7 @@ public class Player : MonoBehaviour
 	}
 
 	private void UpdateCameraPosition(){
-		Camera.main.transform.position = new Vector3 (transform.position.x, transform.position.y, -20f);
+		Camera.main.transform.position = new Vector3 (transform.position.x, transform.position.y, -15f);
 	}
 
 	private Vector3 GetVect3Rotation(){
@@ -131,18 +129,21 @@ public class Player : MonoBehaviour
 			timer = Time.time;
 			Fire();
 		}
-		if(timer + 0.005f < Time.time)
+		if(timer + 0.02f < Time.time)
 		{
 			timer = 0f;
 		}
 	}
 
 	private void Fire(){
-		GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
-		Projectile projScript = projInst.GetComponent<Projectile> ();
-		Vector3 pos = new Vector3 (UnityEngine.Random.Range (GetVect3Rotation().x - 0.2f, GetVect3Rotation().x + 0.2f), UnityEngine.Random.Range (GetVect3Rotation().y -0.2f, GetVect3Rotation().y +0.2f), 0f);
-		projScript.Go (projectileRange, 10, 1, 6, dinosaur.weapon.damage, pos.normalized, "Enemy", dinosaur);
-		projInst.GetComponent<TrailRenderer> ().material = isaBlue;
+		for(int i = 0; i < projectileCount; ++i)
+		{
+			GameObject projInst = (GameObject)Instantiate (projectile, transform.position + GetVect3Rotation (), Quaternion.identity);
+			Projectile projScript = projInst.GetComponent<Projectile> ();
+			Vector3 pos = new Vector3 (UnityEngine.Random.Range (GetVect3Rotation().x - 0.2f, GetVect3Rotation().x + 0.2f), UnityEngine.Random.Range (GetVect3Rotation().y -0.2f, GetVect3Rotation().y +0.2f), 0f);
+			projScript.Go (projectileRange, 10, 1, 6, dinosaur.weapon.damage, pos.normalized, "Enemy", dinosaur);
+			projInst.GetComponent<TrailRenderer> ().material = isaBlue;
+		}
 	}
 
 	private void CheckInBounds(){
