@@ -29,9 +29,7 @@ public class DinoGenerator : MonoBehaviour {
 			Vector3 newDinoVector = new Vector3(x,y);
 			int num = Random.Range(0, 6);
 			GameObject newDino;
-			float scaleFl = Random.Range (80, 120) / 300f;
-			Vector3 scale = new Vector3(scaleFl, scaleFl, 1);
-			Debug.Log (scale);
+
 			switch (num) {
 			case 0:
 				newDino = (GameObject)Instantiate(diplodofortressPrefab, newDinoVector, Quaternion.identity);
@@ -55,6 +53,13 @@ public class DinoGenerator : MonoBehaviour {
 				newDino = (GameObject)Instantiate(diplodofortressPrefab, newDinoVector, Quaternion.identity);
 				break;
 			}
+			Bounds bounds = newDino.GetComponent<SpriteRenderer>().sprite.bounds;
+			float xSize = 10f / bounds.size.x;
+			float ySize = 8f / bounds.size.y;
+			
+			float scaleFl = Random.Range (80, 120) / 300f;
+			Vector3 scale = new Vector3(scaleFl * xSize, scaleFl * ySize, 1);
+
 			newDino.transform.localScale = scale;
 			chooseDino.ChooseRandomDino(newDino, num);
 			newDino.GetComponent<Dino>().Create();
