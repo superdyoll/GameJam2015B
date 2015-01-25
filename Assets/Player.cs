@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
 		dinosaur.playerControlled = true;
 		dinosaur.Create ();
 
-		bloodTarget = ((20 - dinosaur.survivability) * 100 * Level.getLevel()+1) * 666;
+		bloodTarget = ((20 - dinosaur.survivability) * 100 * Level.getLevel()+1 * Level.getLevel()+1) * 666;
 		startHealth = health = dinosaur.health * 20;
 		UpdateHealthbar ();
 
@@ -195,6 +195,8 @@ public class Player : MonoBehaviour
 		if (Input.GetKey ("a")) {
 			if (cheatcode == 9){
 				Debug.Log("Konami Code FTW");
+				cameraShake shaker = new cameraShake();
+				shaker.Shake();
 				cheatcode = 0;
 			}
 		}
