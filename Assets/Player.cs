@@ -235,6 +235,10 @@ Texture2D cursorTexture;
 		if (Input.GetKey(KeyCode.KeypadEnter) || Input.GetKey ("enter") || Input.GetKey ("return")){ 
 			if (onPause){
 				Time.timeScale = 1;
+				Level.setLevel(0);
+
+				bloodScore = bloodTarget = 0;
+
 				Application.LoadLevel (Application.loadedLevelName);
 			}
 		}
