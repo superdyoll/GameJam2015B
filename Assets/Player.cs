@@ -204,6 +204,12 @@ public class Player : MonoBehaviour
 		if (Input.GetKey ("escape")) {
 			Application.Quit();
 		}
+
+		if (Input.GetKey ("enter")) {
+			if(onPause){
+				Application.LoadLevel("main");
+			}
+		}
 	}
 
 	private void UpdateHealthbar() {
