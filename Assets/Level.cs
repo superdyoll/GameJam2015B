@@ -17,6 +17,12 @@ public static class Level{
 		level++;
 		timer = 1200;
 		levelText.text = "Annihilation Level: " + level;
+
+		if (level % 2 == 0) {
+			levelText.color = new Color (0.15f, 0.5f, 0.8f);
+		} else {
+			levelText.color = new Color (0.8f, 1f, 0f);
+		}
 	}
 
 	public static int getLevel (){
