@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c425fcd89bff514fb8f8e5abb487e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalDinosaurs: 100
+  totalDinosaurs: 20
   assaultosaurusPrefab: {fileID: 100000, guid: 9217618225a20f44e8cf4928daff21a9, type: 2}
   diplodofortressPrefab: {fileID: 183150, guid: 95c22def335ce444180ac32541e7ec05,
     type: 2}
@@ -220,7 +220,7 @@ GUIText:
   m_GameObject: {fileID: 204768141}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: GAME OVER
+  m_Text: Game over
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
@@ -228,7 +228,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: e1589235ac7a44c4bb7bc69af4870f69, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 164
+  m_FontSize: 140
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -646,7 +646,7 @@ GUIText:
   m_GameObject: {fileID: 702198904}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Gui Text
+  m_Text: GUI text
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
@@ -998,7 +998,6 @@ MonoBehaviour:
   isaBlue: {fileID: 2100000, guid: ef4fa40d4928a0a4a881d0bea17bdbee, type: 2}
   health: 100
   startHealth: 0
-  projectileCount: 4
   numberOfUpgrades: 5
   fluff: {fileID: 21300000, guid: dc42f501e56019f45bd6839d82a83d4a, type: 3}
   bloodScore: 0
