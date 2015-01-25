@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class Projectile : MonoBehaviour{
+	public GameObject explosionPrefab;
+
 	private int range, radius, bounce, speed, damage;
 	private Vector3 direction;
 	private GameObject player;
@@ -54,9 +56,8 @@ public class Projectile : MonoBehaviour{
 			//explosion.Play();
 
 			//if(!explosion.isPlaying){
-				//Debug.Log ("Destroyed bullet after range");
-				Destroy(this.gameObject);
-			//}
+
+			RemoveProjectile();
 		}
 	}
 
@@ -90,9 +91,15 @@ public class Projectile : MonoBehaviour{
 				player.GetComponent<Player>().Damage(damage, origin);
 			}
 
-			Destroy (this.gameObject);
+			RemoveProjectile();
 			
 			Debug.Log("Destroyed bullet");
 		}
+	}
+
+	private void RemoveProjectile() {
+		Instantiate (explosionPrefab, new Vector3 (transform.position.x, transform.position.y), Quaternion.identity);
+
+		Destroy (this.gameObject);
 	}
 }
