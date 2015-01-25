@@ -173,7 +173,7 @@ public class Player : MonoBehaviour
 		float percentage = (float) health / startHealth;
 		float move = percentage - 1;
 
-		healthbar.transform.position = new Vector2(move, 0);
+		healthbar.transform.position = new Vector2(move, healthbar.transform.position.y);
 	}
 
 	public void Damage(int amount) {
