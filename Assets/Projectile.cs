@@ -42,12 +42,12 @@ public class Projectile : MonoBehaviour{
 		transform.position += direction * speed * 0.06f;
 
 		float distanceToPlayer = Vector3.Distance (transform.position, player.transform.position); 
-		Debug.Log ("ty " + distanceToPlayer + " range " + range);
+		//Debug.Log ("ty " + distanceToPlayer + " range " + range);
 		if(distanceToPlayer > range){
 			//explosion.Play();
 
 			//if(!explosion.isPlaying){
-				Debug.Log ("Destroyed bullet after range");
+				//Debug.Log ("Destroyed bullet after range");
 				Destroy(this.gameObject);
 			//}
 		}
@@ -79,8 +79,8 @@ public class Projectile : MonoBehaviour{
 				projectile.GetComponent<Projectile> ().Go (range, radius, bounce, speed, damage, target, hostileTo);
 			}
 
-			Destroy (gameObject);
-			Debug.Log("Destroyed bullet");
+			Destroy (this.gameObject);
+			//Debug.Log("Destroyed bullet");
 		}
 	}
 }

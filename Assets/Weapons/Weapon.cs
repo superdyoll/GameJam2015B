@@ -27,7 +27,7 @@ public abstract class Weapon : MonoBehaviour {
 		radius = baseRadius + pointsIn;
 		damage = baseDamage + pointsIn;
 
-		Debug.Log ("Hurr: " + range);
+		//Debug.Log ("Hurr: " + range);
 	}
 
 	// Use this for initialization
