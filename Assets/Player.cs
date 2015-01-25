@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
 	}
 
 	void Ascend(Dino dinosaur) {
+		Debug.Log ("New Dino: " + dinosaur.gameObject.name);
 		dinosaur.playerControlled = true;
 		dinosaur.Create ();
 
@@ -49,8 +50,10 @@ public class Player : MonoBehaviour
 		startHealth = health = dinosaur.health * 20;
 		UpdateHealthbar ();
 
-		spriteImage = GetComponent<SpriteRenderer> ().sprite;
-
+		spriteImage = dinosaur.GetComponent<SpriteRenderer> ().sprite;
+		SpriteRenderer sr = this.gameObject.GetComponent<SpriteRenderer>();
+		sr.sprite = spriteImage;
+		
 		speed = dinosaur.speed;
 		projectileRange = dinosaur.getRange();
 	}
@@ -195,14 +198,20 @@ public class Player : MonoBehaviour
 		if (Input.GetKey ("a")) {
 			if (cheatcode == 9){
 				Debug.Log("Konami Code FTW");
-				cameraShake shaker = new cameraShake();
-				shaker.Shake();
+				SpriteRenderer sr = this.gameObject.GetComponent<SpriteRenderer>();
+				sr.sprite = fluff;
 				cheatcode = 0;
 			}
 		}
 
 		if (Input.GetKey ("escape")) {
 			Application.Quit();
+		}
+
+		if (Input.GetKey ("enter")) {
+			if(onPause){
+				Application.LoadLevel("main");
+			}
 		}
 	}
 

@@ -8,7 +8,7 @@ public class DinoAI : MonoBehaviour {
 	private bool ready = false;
 	private Vector3 movingDirection;
 	private float timer = 0.5f;
-	private float delay = 0.25f;
+	private float delay = 0.5f;
 
 	public void InsertBrain (Dino dinoStats) {
 		this.dinoStats = dinoStats;
@@ -53,7 +53,7 @@ public class DinoAI : MonoBehaviour {
 		if (timer == 0f) {
 			timer = Time.time;
 			delay = ((float)Random.Range(40,70)) / 100f;
-			Debug.Log("Delay:" + delay);
+			//Debug.Log("Delay:" + delay);
 			Vector3 positionToTarget = (Vector3)player.GetPosition() - transform.position;
 			GameObject projInst = (GameObject)Instantiate (player.projectile, transform.position + positionToTarget.normalized, Quaternion.identity);
 			Projectile projScript = projInst.GetComponent<Projectile> ();
